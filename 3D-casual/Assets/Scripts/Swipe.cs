@@ -9,10 +9,10 @@ public class Swipe : MonoBehaviour
     Vector2 startPos, endPos, direction;
     float touchTimeStart, touchTimeFinish, timeInterval;
     [SerializeField]
-    float throwForceInXandY = 2f;
+    float throwForceInXandY = 1f;
 
     [SerializeField]
-    float throwForceInZ = 500f;
+    float throwForceInZ = 250f;
 
     Rigidbody rb;
 
@@ -34,17 +34,12 @@ public class Swipe : MonoBehaviour
         if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended))
         {
             touchTimeFinish = Time.time;
-
             timeInterval = touchTimeFinish - touchTimeStart;
-
             endPos = Input.GetTouch(0).position;
-
             direction = startPos - endPos;
-
             rb.isKinematic = false;
             rb.AddForce(-direction.x * throwForceInXandY, -direction.y * throwForceInXandY, throwForceInZ / timeInterval);
 
-            //Destroy(gameObject, 3f);
         }
 
         if ( Input.GetMouseButtonDown(0)) {
