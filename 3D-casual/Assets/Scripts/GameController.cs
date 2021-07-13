@@ -7,11 +7,12 @@ public class GameController : MonoBehaviour
     public bool canSpawnBall;
     private Vector3 ballStartPos;
     public GameObject ball;
-
+    Rigidbody ballrb;
 
     // Start is called before the first frame update
     void Start()
     {
+        ballrb = ball.GetComponent<Rigidbody>();
         ballStartPos = ball.transform.position;
     }
 
@@ -22,6 +23,7 @@ public class GameController : MonoBehaviour
         {
             ball.transform.position = ballStartPos;
             canSpawnBall = false;
+            ballrb.isKinematic = true;
         }
     }
 }
