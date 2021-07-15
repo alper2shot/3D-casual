@@ -52,7 +52,7 @@ public class Swipe : MonoBehaviour
             if (timeInterval > 0.2f)
             {
                 rb.AddForce(-direction.x * throwForceInXandY, -direction.y * throwForceInXandY, throwForceInZ / timeInterval);
-                
+                rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
             }
             isTouched = true;
         }
