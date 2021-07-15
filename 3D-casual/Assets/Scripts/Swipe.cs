@@ -9,6 +9,8 @@ public class Swipe : MonoBehaviour
     public bool isTouched = false;
     Vector2 startPos, endPos, direction;
     float touchTimeStart, touchTimeFinish, timeInterval;
+    [SerializeField]
+    float mass;
 
     [SerializeField]
     float throwForceInXandY = 1f;
@@ -48,13 +50,15 @@ public class Swipe : MonoBehaviour
             timeInterval = touchTimeFinish - touchTimeStart;
             endPos = Input.GetTouch(0).position;
             direction = startPos - endPos;
-            rb.isKinematic = false;
-            if (timeInterval > 0.2f)
+            
+            if (timeInterval > 0.1f)
             {
-                rb.AddForce(-direction.x * throwForceInXandY, -direction.y * throwForceInXandY, throwForceInZ / timeInterval);
+                rb.isKinematic = false;
+                rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
                 rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
+                isTouched = true;
             }
-            isTouched = true;
+            
         }
 
         if ( Input.GetMouseButtonDown(0)&& !isTouched) {
@@ -68,13 +72,14 @@ public class Swipe : MonoBehaviour
             timeInterval = touchTimeFinish - touchTimeStart;
             endPos = Input.mousePosition;
             direction = startPos - endPos;
-            rb.isKinematic = false;
-            if (timeInterval > 0.2f)
+            if (timeInterval > 0.1f)
             {
-                rb.AddForce(-direction.x * throwForceInXandY, -direction.y * throwForceInXandY, throwForceInZ / timeInterval);
+                rb.isKinematic = false;
+                rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
                 rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
+                isTouched = true;
             }
-            isTouched = true;
+        
         }
 
         

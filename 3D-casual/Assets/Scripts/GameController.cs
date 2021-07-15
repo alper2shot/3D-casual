@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     {
         if(ballCount == 0)
         {
-            Destroy(ball, 5f);
+            Destroy(ball, 4f);
         }
 
         if (canSpawnBall && ballCount >0)
