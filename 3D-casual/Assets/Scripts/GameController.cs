@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -17,12 +18,18 @@ public class GameController : MonoBehaviour
         ballStartPos = ball.transform.position;
     }
 
+    void LoadNewScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(ballCount == 0)
         {
             Destroy(ball, 4f);
+            LoadNewScene();
         }
 
         if (canSpawnBall && ballCount >0)
