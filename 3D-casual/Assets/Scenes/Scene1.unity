@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 166102943}
   m_Layer: 7
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 783726690}
   m_Layer: 7
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1779095782}
 --- !u!64 &1176594379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 1399579354}
   m_Layer: 7
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1779095782}
 --- !u!64 &1598676145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e14ad76783042e48c77dbe540b7cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needCount: 10
+  needCount: 4
   counter: 0
   controller: {fileID: 1779095782}
 --- !u!64 &1700659020
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1779095782}
 --- !u!64 &1931678414
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1510,7 +1510,7 @@ GameObject:
   - component: {fileID: 2033253684}
   m_Layer: 7
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
