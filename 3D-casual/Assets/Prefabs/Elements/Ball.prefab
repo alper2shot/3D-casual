@@ -130,5 +130,5 @@ MonoBehaviour:
   isTouched: 0
   mass: 2
   throwForceInXandY: 1
-  restricter: 0.6
+  restricter: 0.4
   throwForceInZ: 300
