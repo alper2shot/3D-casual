@@ -2312,7 +2312,7 @@ MonoBehaviour:
   canSpawnBall: 0
   groundPlane: 0
   ball: {fileID: 1851823831}
-  ballCount: 10
+  ballCount: 3
 --- !u!4 &1647894590
 Transform:
   m_ObjectHideFlags: 0
