@@ -15,7 +15,10 @@ public class Swipe : MonoBehaviour
     [SerializeField]
     float throwForceInXandY = 1f;
 
-  
+    [SerializeField]
+    float restricter;
+
+
 
     [SerializeField]
     float throwForceInZ = 250f;
@@ -50,7 +53,12 @@ public class Swipe : MonoBehaviour
             timeInterval = touchTimeFinish - touchTimeStart;
             endPos = Input.GetTouch(0).position;
             direction = startPos - endPos;
-            
+
+            if (timeInterval > restricter)
+            {
+                timeInterval = restricter;
+            }
+
             if (timeInterval > 0.1f)
             {
                 rb.isKinematic = false;
@@ -70,6 +78,12 @@ public class Swipe : MonoBehaviour
         {
             touchTimeFinish = Time.time;
             timeInterval = touchTimeFinish - touchTimeStart;
+           
+            if(timeInterval > restricter)
+            {
+                timeInterval = restricter;
+            }
+
             endPos = Input.mousePosition;
             direction = startPos - endPos;
             if (timeInterval > 0.1f)
