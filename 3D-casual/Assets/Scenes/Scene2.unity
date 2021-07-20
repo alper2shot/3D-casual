@@ -1289,6 +1289,7 @@ MonoBehaviour:
   isTouched: 0
   mass: 2
   throwForceInXandY: 1
+  restricter: 0.6
   throwForceInZ: 300
 --- !u!54 &1190009299
 Rigidbody:

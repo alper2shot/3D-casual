@@ -29,7 +29,14 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-   
+    void LoadSameScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+     
+    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -45,8 +52,8 @@ public class GameController : MonoBehaviour
         {
             //Game Over and Ads
 
-            Destroy(ball, 4f);
-            LoadNewScene();
+            //Destroy(ball, 4f);
+            LoadSameScene();
         }
 
         if (canSpawnBall && ballCount >0)

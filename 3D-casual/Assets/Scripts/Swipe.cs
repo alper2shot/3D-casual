@@ -32,12 +32,13 @@ public class Swipe : MonoBehaviour
         
     }
 
+    /*
     IEnumerator Ball()
     {
         yield return new WaitForSeconds(5);
         controller.GetComponent<GameController>().canSpawnBall = true;
     }
-
+    */
     // Update is called once per frame
     void Update()
     {
@@ -99,12 +100,21 @@ public class Swipe : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    
+    private void OnCollisionStay(Collision collision)
     {
+        /*
         if(!worked)
         {
             StartCoroutine(Ball());
             worked = true;
         }
+        */
+        if (Input.GetMouseButtonUp(0))
+        {
+            controller.GetComponent<GameController>().canSpawnBall = true;
+        }
+
     }
+    
 }

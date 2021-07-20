@@ -276,6 +276,7 @@ MonoBehaviour:
   isTouched: 0
   mass: 2
   throwForceInXandY: 1
+  restricter: 0.6
   throwForceInZ: 300
 --- !u!54 &496078003
 Rigidbody:
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   isTouched: 0
   mass: 0
   throwForceInXandY: 1
+  restricter: 0
   throwForceInZ: 250
 --- !u!1 &1931678412
 GameObject:
