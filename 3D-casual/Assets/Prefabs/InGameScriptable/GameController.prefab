@@ -47,7 +47,7 @@ MonoBehaviour:
   canSpawnBall: 0
   groundPlane: 0
   ball: {fileID: 0}
-  ballCount: 3
+  ballCount: 5
 --- !u!114 &1272605301129748278
 MonoBehaviour:
   m_ObjectHideFlags: 0

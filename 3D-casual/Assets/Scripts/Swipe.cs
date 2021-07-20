@@ -40,7 +40,7 @@ public class Swipe : MonoBehaviour
     }
     */
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(Input.touchCount > 0 && !isTouched && Input.GetTouch(0).phase == TouchPhase.Began)
         {
