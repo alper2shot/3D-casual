@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public bool canSpawnBall;
+    public bool canSpawnBall=false;
+    public bool groundPlane=false;
+    private bool ok = true;
+
     private Vector3 ballStartPos;
     public GameObject ball;
+    
+
     Rigidbody ballrb;
     public int ballCount;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +29,22 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+   
+
     // Update is called once per frame
     void Update()
     {
-        if(ballCount == 0)
+        if (groundPlane && ok)
         {
+            
+            LoadNewScene();
+            ok = false;
+        }
+
+        if(ballCount == 0 && !groundPlane)
+        {
+            //Game Over and Ads
+
             Destroy(ball, 4f);
             LoadNewScene();
         }

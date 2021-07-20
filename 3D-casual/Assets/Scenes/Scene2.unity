@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1773407027}
 --- !u!64 &836032855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1748,8 +1748,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400657942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -9.9, z: 14.9}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0, y: -8.5, z: 14.9}
+  m_LocalScale: {x: 5, y: 0, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needCount: 10
   counter: 0
-  pass: 0
+  controller: {fileID: 1773407027}
 --- !u!1 &1410708385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1773407027}
 --- !u!64 &1693420496
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1773407027}
 --- !u!64 &1769410204
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2285,6 +2285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSpawnBall: 0
+  groundPlane: 0
   ball: {fileID: 1190009297}
   ballCount: 10
 --- !u!4 &1773407030

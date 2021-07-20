@@ -6,11 +6,16 @@ public class GroundPlane : MonoBehaviour
 {
     public int needCount;
     public int counter = 0;
-    public bool pass = false;
+    public GameObject controller;
 
     private void OnTriggerEnter(Collider collider)
     {
+        if(collider.CompareTag("Block"))
         counter++;
+
+        collider.tag = "Counted";
+        
+
     }
 
     // Update is called once per frame
@@ -18,7 +23,7 @@ public class GroundPlane : MonoBehaviour
     {
         if(needCount == counter)
         {
-            pass = true;
+            controller.GetComponent<GameController>().groundPlane = true;
         }
     }
 }
