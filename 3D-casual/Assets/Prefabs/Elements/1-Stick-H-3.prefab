@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2897452309753017919}
   - component: {fileID: 1886493189340503573}
   m_Layer: 7
-  m_Name: Block-H-L
+  m_Name: 1-Stick-H-3
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3404929087604337029}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 5.5, z: 38.1}
-  m_LocalScale: {x: 1.2, y: 14, z: 1}
+  m_LocalScale: {x: 1.5, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d7f54e38414034f84b7182bbf5dee281, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
