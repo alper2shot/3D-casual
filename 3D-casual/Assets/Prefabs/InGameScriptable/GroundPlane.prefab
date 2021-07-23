@@ -67,6 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e14ad76783042e48c77dbe540b7cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needCount: 10
+  needCount: 5
   counter: 0
   controller: {fileID: 0}
