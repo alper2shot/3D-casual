@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8555099049174400796}
   - component: {fileID: 1409833247242556732}
   - component: {fileID: 2417098020443045142}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: 2-Stick-H-1
-  m_TagString: Block
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
