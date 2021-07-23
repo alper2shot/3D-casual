@@ -192,7 +192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1985308836}
     - target: {fileID: 5293156305283243304, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
       propertyPath: m_Name
@@ -424,6 +424,11 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4237407492511417805, guid: 2f7a7c59690324ebdbe5acf4e10ab75d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7bcc286c796a45ba8d7e8a4e10bf8ee, type: 2}
     - target: {fileID: 4237407492511417806, guid: 2f7a7c59690324ebdbe5acf4e10ab75d,
         type: 3}
       propertyPath: m_RootOrder
@@ -503,6 +508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneHorizontal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1763900318306957795, guid: 7053706c671a844cb80389b5e8a9c8f7,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1985308836}
     - target: {fileID: 1763900318306957798, guid: 7053706c671a844cb80389b5e8a9c8f7,
         type: 3}
       propertyPath: m_RootOrder
@@ -632,6 +642,11 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2230528163269856117, guid: 88a2a63bcfe5847108ffaf51226190f6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7bcc286c796a45ba8d7e8a4e10bf8ee, type: 2}
     - target: {fileID: 2230528163269856119, guid: 88a2a63bcfe5847108ffaf51226190f6,
         type: 3}
       propertyPath: m_Name
@@ -656,6 +671,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 6692434719462584088, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
+        type: 3}
+      propertyPath: needCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6692434719462584088, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1985308836}
     - target: {fileID: 6692434719462584091, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
         type: 3}
       propertyPath: m_RootOrder
@@ -725,6 +750,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneVertical (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5654991963453149895, guid: f7419cd692afe42a4a2e07bd9f066c9f,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1985308836}
     - target: {fileID: 5654991963453149896, guid: f7419cd692afe42a4a2e07bd9f066c9f,
         type: 3}
       propertyPath: m_RootOrder
@@ -1239,6 +1269,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac1a65e9379a8455d8688b25e626927b, type: 3}
+--- !u!1 &1985308836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1272605301129748273, guid: fd210aa7a6cab4c30acb612422a65a9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 382961052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2058270566
 PrefabInstance:
   m_ObjectHideFlags: 0
