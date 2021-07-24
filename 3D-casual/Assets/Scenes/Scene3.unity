@@ -893,7 +893,7 @@ PrefabInstance:
         type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1366546515}
     - target: {fileID: 2445883710056698133, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
       propertyPath: restricter

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1763900318306957797}
   - component: {fileID: 1763900318306957796}
   - component: {fileID: 1763900318306957795}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlaneHorizontal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,4 +67,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bcd4f98074cf4d3e87667ec2969eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}

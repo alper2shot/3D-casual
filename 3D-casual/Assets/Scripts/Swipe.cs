@@ -25,21 +25,14 @@ public class Swipe : MonoBehaviour
 
     Rigidbody rb;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         
     }
 
-    /*
-    IEnumerator Ball()
-    {
-        yield return new WaitForSeconds(5);
-        controller.GetComponent<GameController>().canSpawnBall = true;
-    }
-    */
-    // Update is called once per frame
+   
     void FixedUpdate()
     {
         if(Input.touchCount > 0 && !isTouched && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -103,13 +96,7 @@ public class Swipe : MonoBehaviour
     
     private void OnCollisionStay(Collision collision)
     {
-        /*
-        if(!worked)
-        {
-            StartCoroutine(Ball());
-            worked = true;
-        }
-        */
+        
         if (Input.GetMouseButtonUp(0))
         {
             controller.GetComponent<GameController>().canSpawnBall = true;

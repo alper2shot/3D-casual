@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Plane : MonoBehaviour
 {
+    /*
     public GameObject controller;
     
   
@@ -13,4 +14,5 @@ public class Plane : MonoBehaviour
     {
         controller.GetComponent<GameController>().canSpawnBall = true;
     }
+    */
 }

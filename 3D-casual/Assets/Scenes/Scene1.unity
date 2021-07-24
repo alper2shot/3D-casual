@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: cad42895997b1404892efdd52e78464c,
+  m_LightingDataAsset: {fileID: 112000000, guid: 611f298f6c1824b898f87de582089131,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 91a2877894ef14c19a768d2a6a60a9fa,
     type: 2}
@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 2856561447953063750, guid: 7baf252ac8a834231ba2b69c9dc931ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 2856561447953063750, guid: 7baf252ac8a834231ba2b69c9dc931ba,
         type: 3}
@@ -583,11 +583,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneHorizontal (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1763900318306957795, guid: 7053706c671a844cb80389b5e8a9c8f7,
-        type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1985308836}
     - target: {fileID: 1763900318306957798, guid: 7053706c671a844cb80389b5e8a9c8f7,
         type: 3}
       propertyPath: m_RootOrder
@@ -601,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 1763900318306957798, guid: 7053706c671a844cb80389b5e8a9c8f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30
+      value: 34.5
       objectReference: {fileID: 0}
     - target: {fileID: 1763900318306957798, guid: 7053706c671a844cb80389b5e8a9c8f7,
         type: 3}
@@ -804,6 +799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlaneVertical (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654991963453149892, guid: f7419cd692afe42a4a2e07bd9f066c9f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654991963453149895, guid: f7419cd692afe42a4a2e07bd9f066c9f,
         type: 3}
@@ -1063,7 +1063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424252, guid: 4246925f0393c430189bb4ceba36dc8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 40.25
+      value: 36.25
       objectReference: {fileID: 0}
     - target: {fileID: 424252, guid: 4246925f0393c430189bb4ceba36dc8a, type: 3}
       propertyPath: m_LocalRotation.w
