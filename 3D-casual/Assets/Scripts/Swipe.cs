@@ -5,7 +5,7 @@ using UnityEngine;
 public class Swipe : MonoBehaviour
 {
     public GameObject controller;
-    public bool worked=false;
+    
     public bool isTouched = false;
     Vector2 startPos, endPos, direction;
     float touchTimeStart, touchTimeFinish, timeInterval;

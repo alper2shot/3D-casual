@@ -36,10 +36,7 @@ public class GameController : MonoBehaviour
      
     }
 
-
-
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (groundPlane && ok)
         {
@@ -52,9 +49,10 @@ public class GameController : MonoBehaviour
         {
             //Game Over and Ads
 
-            //Destroy(ball, 4f);
+        
             LoadSameScene();
         }
+
 
         if (canSpawnBall && ballCount >0)
         {
@@ -62,7 +60,6 @@ public class GameController : MonoBehaviour
             canSpawnBall = false;
             ballCount--;
             ballrb.isKinematic = true;
-            ball.GetComponent<Swipe>().worked = false;
             ball.GetComponent<Swipe>().isTouched = false;
         }
 
