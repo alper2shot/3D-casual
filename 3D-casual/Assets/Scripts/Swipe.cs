@@ -58,7 +58,7 @@ public class Swipe : MonoBehaviour
                 timeInterval = restricter;
             }
 
-            if (timeInterval > 0.1f && direction.y >= restricterY)
+            if (-direction.y >= restricterY)
             {
                 rb.isKinematic = false;
                 rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
@@ -87,7 +87,7 @@ public class Swipe : MonoBehaviour
 
             endPos = Input.mousePosition;
             direction = startPos - endPos;
-            if (timeInterval > 0.1f && -direction.y >= restricterY)
+            if (-direction.y >= restricterY)
             {
                
                 rb.isKinematic = false;
