@@ -44,12 +44,17 @@ public class GameController : MonoBehaviour
         }
 
 
-        if (canSpawnBall && ballCount >0)
+        
+
+        
+    }
+
+    void LateUpdate()
+    {
+        if (canSpawnBall && ballCount > 0)
         {
             LoadBall();
         }
-
-        
     }
 
     void LoadNewScene()
