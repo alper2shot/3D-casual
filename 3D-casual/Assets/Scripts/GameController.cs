@@ -24,24 +24,7 @@ public class GameController : MonoBehaviour
         ballStartPos = ball.transform.position;
     }
 
-    void LoadNewScene()
-    {
-        canSpawnBall = false;
-        groundPlane = false;
-        ok = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        
-    }
-
-    void LoadSameScene()
-    {
-        canSpawnBall = false;
-        groundPlane = false;
-        ok = true;
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-     
-    }
+    
 
     void Update()
     {
@@ -63,13 +46,37 @@ public class GameController : MonoBehaviour
 
         if (canSpawnBall && ballCount >0)
         {
-            ballrb.isKinematic = true;
-            ball.transform.position = ballStartPos;
-            canSpawnBall = false;
-            ballCount--;
-            ball.GetComponent<Swipe>().isTouched = false;
+            LoadBall();
         }
 
         
+    }
+
+    void LoadNewScene()
+    {
+        canSpawnBall = false;
+        groundPlane = false;
+        ok = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+
+    void LoadSameScene()
+    {
+        canSpawnBall = false;
+        groundPlane = false;
+        ok = true;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+
+    }
+
+    void LoadBall()
+    {
+        ballrb.isKinematic = true;
+        canSpawnBall = false;
+        ballCount--;
+        ball.transform.position = ballStartPos;
+        ball.GetComponent<Swipe>().isTouched = false;
     }
 }
