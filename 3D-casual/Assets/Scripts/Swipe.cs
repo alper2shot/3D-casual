@@ -47,6 +47,7 @@ public class Swipe : MonoBehaviour
     {
         //Touch Settings
 
+        /*
         if(Input.touchCount > 0 && !isTouched && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             touchTimeStart = Time.time;
@@ -72,7 +73,7 @@ public class Swipe : MonoBehaviour
             }
             
         }
-
+        */
         //Mouse Settings
 
         if ( Input.GetMouseButtonDown(0)&& !isTouched) {
