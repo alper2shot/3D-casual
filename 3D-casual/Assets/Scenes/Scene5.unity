@@ -1431,7 +1431,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 139516, guid: 4246925f0393c430189bb4ceba36dc8a, type: 3}
       propertyPath: m_Name
-      value: Kegel
+      value: Kegel 1
       objectReference: {fileID: 0}
     - target: {fileID: 424252, guid: 4246925f0393c430189bb4ceba36dc8a, type: 3}
       propertyPath: m_RootOrder
@@ -1519,7 +1519,7 @@ PrefabInstance:
     - target: {fileID: 6692434719462584091, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.9
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6692434719462584091, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
         type: 3}
