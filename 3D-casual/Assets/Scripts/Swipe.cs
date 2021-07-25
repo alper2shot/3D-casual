@@ -31,7 +31,7 @@ public class Swipe : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        endPos = Vector2.zero;
     }
 
     void GiveForce()
