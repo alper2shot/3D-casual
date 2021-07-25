@@ -54,18 +54,14 @@ public class GameController : MonoBehaviour
 
     void LoadNewScene()
     {
-        canSpawnBall = false;
-        groundPlane = false;
-        ok = true;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
     void LoadSameScene()
     {
-        canSpawnBall = false;
-        groundPlane = false;
-        ok = true;
+  
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
 
