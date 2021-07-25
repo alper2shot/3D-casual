@@ -14,7 +14,7 @@ public class Swipe : MonoBehaviour
     float mass;
 
     [SerializeField]
-    float throwForceInXandY = 1f;
+    float throwForceInXandY;
 
     [SerializeField]
     float restricter;
@@ -23,7 +23,7 @@ public class Swipe : MonoBehaviour
     float restricterY;
 
     [SerializeField]
-    float throwForceInZ = 250f;
+    float throwForceInZ;
 
     Rigidbody rb;
 
