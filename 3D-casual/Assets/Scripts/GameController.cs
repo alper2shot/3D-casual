@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
      
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (groundPlane && ok)
         {

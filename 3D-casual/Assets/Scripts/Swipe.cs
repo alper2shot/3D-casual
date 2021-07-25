@@ -9,6 +9,7 @@ public class Swipe : MonoBehaviour
     public bool isTouched = false;
     Vector2 startPos, endPos, direction;
     float touchTimeStart, touchTimeFinish, timeInterval;
+
     [SerializeField]
     float mass;
 
@@ -18,7 +19,8 @@ public class Swipe : MonoBehaviour
     [SerializeField]
     float restricter;
 
-
+    [SerializeField]
+    float restricterY;
 
     [SerializeField]
     float throwForceInZ = 250f;
@@ -35,6 +37,8 @@ public class Swipe : MonoBehaviour
    
     void FixedUpdate()
     {
+        //Touch Settings
+
         if(Input.touchCount > 0 && !isTouched && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             touchTimeStart = Time.time;
@@ -48,12 +52,13 @@ public class Swipe : MonoBehaviour
             endPos = Input.GetTouch(0).position;
             direction = startPos - endPos;
 
+
             if (timeInterval > restricter)
             {
                 timeInterval = restricter;
             }
 
-            if (timeInterval > 0.1f)
+            if (timeInterval > 0.1f && direction.y >= restricterY)
             {
                 rb.isKinematic = false;
                 rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
@@ -62,6 +67,8 @@ public class Swipe : MonoBehaviour
             }
             
         }
+
+        //Mouse Settings
 
         if ( Input.GetMouseButtonDown(0)&& !isTouched) {
             touchTimeStart = Time.time;
@@ -80,8 +87,9 @@ public class Swipe : MonoBehaviour
 
             endPos = Input.mousePosition;
             direction = startPos - endPos;
-            if (timeInterval > 0.1f)
+            if (timeInterval > 0.1f && -direction.y >= restricterY)
             {
+               
                 rb.isKinematic = false;
                 rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
                 rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);

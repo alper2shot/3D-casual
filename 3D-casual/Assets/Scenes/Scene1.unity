@@ -569,6 +569,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaneHorizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 4237407492511417842, guid: 2f7a7c59690324ebdbe5acf4e10ab75d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7a7c59690324ebdbe5acf4e10ab75d, type: 3}
 --- !u!1001 &1128612299

@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
-  worked: 0
   isTouched: 0
   mass: 2
   throwForceInXandY: 1
-  restricter: 0.3
+  restricter: 0.25
+  restricterY: 50
   throwForceInZ: 300
