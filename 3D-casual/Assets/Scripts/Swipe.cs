@@ -7,14 +7,18 @@ public class Swipe : MonoBehaviour
     public GameObject controller;
     
     public bool isTouched = false;
-    Vector2 startPos, endPos, direction;
+    Vector3 startPos, endPos, direction, myVectorEnd, myVectorStart;
+    
     float touchTimeStart, touchTimeFinish, timeInterval;
 
     [SerializeField]
     float mass;
 
     [SerializeField]
-    float throwForceInXandY;
+    float throwForceInX;
+
+    [SerializeField]
+    float throwForceInY;
 
     [SerializeField]
     float restricter;
@@ -31,13 +35,13 @@ public class Swipe : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        endPos = Vector2.zero;
+     
     }
 
     void GiveForce()
     {
         rb.isKinematic = false;
-        rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
+        rb.AddForce(-direction.x * throwForceInX * mass, -direction.y * throwForceInY * mass, throwForceInZ / timeInterval * mass);
         rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
         isTouched = true;
     }
@@ -78,26 +82,28 @@ public class Swipe : MonoBehaviour
 
         if ( Input.GetMouseButtonDown(0)&& !isTouched) {
             touchTimeStart = Time.time;
-            startPos = Input.mousePosition;
+            myVectorStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
+            startPos = Camera.main.ScreenToWorldPoint(myVectorStart);
+            
         }
 
         if (Input.GetMouseButtonUp(0) && !isTouched)
         {
             touchTimeFinish = Time.time;
             timeInterval = touchTimeFinish - touchTimeStart;
-            endPos = Input.mousePosition;
-            direction = startPos - endPos;
+            myVectorEnd = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
+            endPos = Camera.main.ScreenToWorldPoint(myVectorEnd);
+            direction =startPos - endPos;
 
             if (timeInterval > restricter)
             {
                 timeInterval = restricter;
             }
 
-        
-            if (-direction.y >= restricterY)
-            {
+
+            if(-direction.y > restricterY)
                 GiveForce();
-            }
+            
         
         }
 

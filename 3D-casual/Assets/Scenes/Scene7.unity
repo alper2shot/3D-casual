@@ -910,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 2445883710056698133, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
       propertyPath: restricterY
-      value: 50
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3183794881495446364, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}

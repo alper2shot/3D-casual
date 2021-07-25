@@ -128,7 +128,8 @@ MonoBehaviour:
   controller: {fileID: 0}
   isTouched: 0
   mass: 2
-  throwForceInXandY: 1
+  throwForceInX: 50
+  throwForceInY: 50
   restricter: 0.25
-  restricterY: 50
+  restricterY: 1
   throwForceInZ: 300
