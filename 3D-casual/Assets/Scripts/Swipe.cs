@@ -34,6 +34,14 @@ public class Swipe : MonoBehaviour
         
     }
 
+    void GiveForce()
+    {
+        rb.isKinematic = false;
+        rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
+        rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
+        isTouched = true;
+    }
+
    
     void FixedUpdate()
     {
@@ -60,10 +68,7 @@ public class Swipe : MonoBehaviour
 
             if (-direction.y >= restricterY)
             {
-                rb.isKinematic = false;
-                rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
-                rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
-                isTouched = true;
+                GiveForce();
             }
             
         }
@@ -79,21 +84,18 @@ public class Swipe : MonoBehaviour
         {
             touchTimeFinish = Time.time;
             timeInterval = touchTimeFinish - touchTimeStart;
-           
-            if(timeInterval > restricter)
+            endPos = Input.mousePosition;
+            direction = startPos - endPos;
+
+            if (timeInterval > restricter)
             {
                 timeInterval = restricter;
             }
 
-            endPos = Input.mousePosition;
-            direction = startPos - endPos;
+        
             if (-direction.y >= restricterY)
             {
-               
-                rb.isKinematic = false;
-                rb.AddForce(-direction.x * throwForceInXandY * mass, -direction.y * throwForceInXandY * mass, throwForceInZ / timeInterval * mass);
-                rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
-                isTouched = true;
+                GiveForce();
             }
         
         }
