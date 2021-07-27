@@ -82,9 +82,11 @@ public class Swipe : MonoBehaviour
 
         if ( Input.GetMouseButtonDown(0)&& !isTouched) {
             touchTimeStart = Time.time;
-            myVectorStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
+            myVectorStart = new Vector3(0, 0, 40f);
             startPos = Camera.main.ScreenToWorldPoint(myVectorStart);
-            
+            startPos.x = 0f;
+            startPos.y = -15f;
+        
         }
 
         if (Input.GetMouseButtonUp(0) && !isTouched)
