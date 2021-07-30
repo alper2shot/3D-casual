@@ -40,6 +40,8 @@ public class Swipe : MonoBehaviour
 
     void GiveForce()
     {
+        startPos.x = 0f;
+        startPos.y = -15f;
         rb.isKinematic = false;
         rb.AddForce(-direction.x * throwForceInX * mass, -direction.y * throwForceInY * mass, throwForceInZ / timeInterval * mass);
         rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
@@ -80,7 +82,7 @@ public class Swipe : MonoBehaviour
         */
         //Mouse Settings
 
-        if ( Input.GetMouseButtonDown(0)&& !isTouched) {
+        if ( Input.GetMouseButtonDown(0) && !isTouched) {
             touchTimeStart = Time.time;
             myVectorStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
             startPos = Camera.main.ScreenToWorldPoint(myVectorStart);
@@ -101,28 +103,12 @@ public class Swipe : MonoBehaviour
                 timeInterval = restricter;
             }
 
-
-            if(-direction.y > restricterY)
+            if (-direction.y > restricterY)
             {
-                startPos.x = 0f;
-                startPos.y = -15f;
+
                 GiveForce();
             }
-                
-            
-        
-        }
 
-        
-    }
-
-    
-    private void OnCollisionStay(Collision collision)
-    {
-        
-        if (Input.GetMouseButtonUp(0))
-        {
-            controller.GetComponent<GameController>().canSpawnBall = true;
         }
 
     }

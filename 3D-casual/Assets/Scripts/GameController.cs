@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
 
     
 
-    void Update()
+    void FixedUpdate()
     {
         if (groundPlane && ok)
         {
@@ -44,17 +44,13 @@ public class GameController : MonoBehaviour
         }
 
 
-        
-
-        
-    }
-
-    void LateUpdate()
-    {
-        if (canSpawnBall && ballCount > 0)
+        if (ball.GetComponent<Swipe>().isTouched && ballCount > 0 && Input.GetMouseButtonDown(0))
         {
+
             LoadBall();
         }
+
+
     }
 
     void LoadNewScene()
