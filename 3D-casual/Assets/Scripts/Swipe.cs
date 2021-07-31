@@ -5,8 +5,10 @@ using UnityEngine;
 public class Swipe : MonoBehaviour
 {
     public GameObject controller;
-    
+
+    public bool isBallActive = false;
     public bool isTouched = false;
+    private bool once = true;
     Vector3 startPos, endPos, direction, myVectorEnd, myVectorStart;
     
     float touchTimeStart, touchTimeFinish, timeInterval;
@@ -49,7 +51,7 @@ public class Swipe : MonoBehaviour
     }
 
    
-    void FixedUpdate()
+    void Update()
     {
         //Touch Settings
 
@@ -82,35 +84,54 @@ public class Swipe : MonoBehaviour
         */
         //Mouse Settings
 
-        if ( Input.GetMouseButtonDown(0) && !isTouched) {
-            touchTimeStart = Time.time;
-            myVectorStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
-            startPos = Camera.main.ScreenToWorldPoint(myVectorStart);
-            
-        
-        }
 
-        if (Input.GetMouseButtonUp(0) && !isTouched)
+        if (isBallActive)
         {
-            touchTimeFinish = Time.time;
-            timeInterval = touchTimeFinish - touchTimeStart;
-            myVectorEnd = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
-            endPos = Camera.main.ScreenToWorldPoint(myVectorEnd);
-            direction =startPos - endPos;
-
-            if (timeInterval > restricter)
+            if (Input.GetMouseButtonDown(0) && !isTouched)
             {
-                timeInterval = restricter;
+                touchTimeStart = Time.time;
+                myVectorStart = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
+                startPos = Camera.main.ScreenToWorldPoint(myVectorStart);
+
+
             }
 
-            if (-direction.y > restricterY)
+            if (Input.GetMouseButtonUp(0) && !isTouched)
             {
+                touchTimeFinish = Time.time;
+                timeInterval = touchTimeFinish - touchTimeStart;
+                myVectorEnd = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
+                endPos = Camera.main.ScreenToWorldPoint(myVectorEnd);
+                direction = startPos - endPos;
 
-                GiveForce();
+                if (timeInterval > restricter)
+                {
+                    timeInterval = restricter;
+                }
+
+                if (-direction.y > restricterY)
+                {
+
+                    GiveForce();
+                }
+
             }
-
         }
+
 
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (once && isBallActive)
+        {
+            controller.GetComponent<GameController>().canSpawnBall = true;
+            once = false;
+        }
+    }
+
+    public void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
+    }
 }

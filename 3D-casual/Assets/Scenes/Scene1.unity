@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 9fc0d4010bbf28b4594072e72b8655ab
-  m_OcclusionCullingData: {fileID: 36300000, guid: cec3b041d4430425cad5a2b39ca09891,
+  m_OcclusionCullingData: {fileID: 36300000, guid: 5879be8c1b2e74016b69f552c5f930bd,
     type: 2}
 --- !u!104 &2
 RenderSettings:
@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 57155661568735792, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 57155661568735792, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
@@ -197,6 +197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293156305283243304, guid: 0918a49a7240746ba9a32d2bd33593c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0918a49a7240746ba9a32d2bd33593c1, type: 3}
@@ -356,7 +361,17 @@ PrefabInstance:
         type: 3}
       propertyPath: ball
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: balls
+      value: 
       objectReference: {fileID: 88697843}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: newBall
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd210aa7a6cab4c30acb612422a65a9b, type: 3}
 --- !u!1001 &736510334
@@ -440,6 +455,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 5739385999074869739, guid: c864f7aaa96d54c058b9b75f3ce19e31,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5739385999074869751, guid: c864f7aaa96d54c058b9b75f3ce19e31,
         type: 3}
       propertyPath: m_RootOrder
@@ -508,6 +528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654991963453149892, guid: f7419cd692afe42a4a2e07bd9f066c9f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5654991963453149896, guid: f7419cd692afe42a4a2e07bd9f066c9f,
         type: 3}
@@ -783,6 +808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2428378580648893814, guid: 59cc532571e0f4724828b7fe9863821d,
         type: 3}
+      propertyPath: far clip plane
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428378580648893814, guid: 59cc532571e0f4724828b7fe9863821d,
+        type: 3}
       propertyPath: m_OcclusionCulling
       value: 1
       objectReference: {fileID: 0}
@@ -947,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_AnchorMax.x
