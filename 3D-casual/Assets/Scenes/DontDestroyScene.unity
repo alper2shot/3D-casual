@@ -514,6 +514,31 @@ PrefabInstance:
       propertyPath: levelStars.Array.data[2]
       value: 
       objectReference: {fileID: 368380096}
+    - target: {fileID: 2645147753223980357, guid: 1c8a4c02268c64d23852354e3250583c,
+        type: 3}
+      propertyPath: levelStars.Array.data[3]
+      value: 
+      objectReference: {fileID: 454883078}
+    - target: {fileID: 2645147753223980357, guid: 1c8a4c02268c64d23852354e3250583c,
+        type: 3}
+      propertyPath: levelStars.Array.data[4]
+      value: 
+      objectReference: {fileID: 1182974757}
+    - target: {fileID: 2645147753223980357, guid: 1c8a4c02268c64d23852354e3250583c,
+        type: 3}
+      propertyPath: levelStars.Array.data[5]
+      value: 
+      objectReference: {fileID: 271312616}
+    - target: {fileID: 2645147753223980357, guid: 1c8a4c02268c64d23852354e3250583c,
+        type: 3}
+      propertyPath: levelStars.Array.data[6]
+      value: 
+      objectReference: {fileID: 1504401506}
+    - target: {fileID: 2645147753223980357, guid: 1c8a4c02268c64d23852354e3250583c,
+        type: 3}
+      propertyPath: levelStars.Array.data[7]
+      value: 
+      objectReference: {fileID: 1490362786}
     - target: {fileID: 2645147753223980359, guid: 1c8a4c02268c64d23852354e3250583c,
         type: 3}
       propertyPath: m_Name
@@ -1853,7 +1878,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 454883080}
         m_TargetAssemblyTypeName: LevelScore, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
