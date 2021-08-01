@@ -5,11 +5,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public GameObject[] levelStars = new GameObject[20];
-    public int levelNumber;
 
-    private void Awake()
+    public void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this); 
     }
 
 }

@@ -369,8 +369,33 @@ PrefabInstance:
       objectReference: {fileID: 88697843}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
+      propertyPath: levelNo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
       propertyPath: newBall
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: ballCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: twoStarScore
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: threeStarScore
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: newBall.Array.size
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd210aa7a6cab4c30acb612422a65a9b, type: 3}

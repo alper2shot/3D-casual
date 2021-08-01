@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelScore : MonoBehaviour
 {
     public int starCount;
+    public int sceneNo;
     public bool isLevelActive;
     public GameObject activeImage;
     public GameObject passiveImage;
@@ -12,7 +14,7 @@ public class LevelScore : MonoBehaviour
     public GameObject twoStar;
     public GameObject threeStar;
 
-    private void Start()
+    private void Update()
     {
 
         if (isLevelActive) {
@@ -48,4 +50,12 @@ public class LevelScore : MonoBehaviour
             }
         }
     }
+
+    public void LoadScene()
+    {
+        //add animation 
+        SceneManager.LoadScene(sceneNo +2);
+        transform.root.gameObject.GetComponent<Canvas>().GetComponent<Canvas>().enabled = false;
+    }
+
 }

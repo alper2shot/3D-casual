@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public int levelNo;
     public bool canSpawnBall=false;
     public bool groundPlane=false;
     private GameObject activatedBall;
     private bool ok = true;
+
+    public float threeStarScore, twoStarScore;
+    private int starCount=0;
 
     private Vector3 ballStartPos;
 
@@ -22,6 +26,7 @@ public class GameController : MonoBehaviour
         ballStartPos = new Vector3(0, -5 , 10);
         SpawnBalls();
         ActivateBalls();
+        
     }
 
     void Update()
@@ -29,15 +34,22 @@ public class GameController : MonoBehaviour
         
         if (groundPlane && ok)
         {
+            CalculateSuccess();
+            ActivateNextScene();
+
             ok = false;
-            LoadNewScene();
+            //LoadNewScene();
+
+            LoadLevelMenu();
             
         }
 
         if(ballCount == 0 && !groundPlane)
         {
+            CalculateSuccess();
             //Game Over and Ads
-            LoadSameScene();
+            //LoadSameScene();
+            LoadLevelMenu();
         }
 
         if (canSpawnBall && ballCount > 0)
@@ -48,6 +60,27 @@ public class GameController : MonoBehaviour
             
         }
 
+    }
+
+    IEnumerator Waiter()
+    {
+        yield return new WaitForSeconds(3);
+    }
+
+    void LoadWinScene()
+    {
+
+    }
+
+    void LoadLoseScene()
+    {
+
+    }
+
+    void LoadLevelMenu()
+    {
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>().enabled = true;
+        SceneManager.LoadScene(2);
     }
 
     void LoadNewScene()
@@ -98,6 +131,37 @@ public class GameController : MonoBehaviour
     void DeactivateBalls()
     {
         activatedBall.GetComponent<Swipe>().isBallActive = false;
+    }
+
+    void CalculateSuccess()
+    {
+        if(ballCount >= threeStarScore)
+        {
+            starCount = 3;
+        }
+        else if(ballCount < threeStarScore && ballCount >= twoStarScore && starCount != 3)
+        {
+            starCount = 2;
+        }
+        else if(ballCount < twoStarScore && starCount < 1)
+        {
+            starCount = 1;
+        }
+
+        GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
+            .levelStars[levelNo-1].GetComponent<LevelScore>().starCount = starCount;
+
+       
+    }
+
+    void ActivateNextScene()
+    {
+        if (GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
+            .levelStars[levelNo] != null && starCount != 0)
+        {
+            GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
+            .levelStars[levelNo].GetComponent<LevelScore>().isLevelActive = true;
+        }
     }
    
 }
