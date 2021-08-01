@@ -932,6 +932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 5293156305283243304, guid: 0918a49a7240746ba9a32d2bd33593c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0918a49a7240746ba9a32d2bd33593c1, type: 3}
 --- !u!1 &1427908003 stripped
@@ -1395,6 +1400,11 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: ball
+      value: 
+      objectReference: {fileID: 1427908003}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: balls
       value: 
       objectReference: {fileID: 1427908003}
     m_RemovedComponents: []
