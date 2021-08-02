@@ -189,6 +189,7 @@ MonoBehaviour:
   oneStar: {fileID: 962594710}
   twoStar: {fileID: 2132162197}
   threeStar: {fileID: 785609308}
+  levelButton: {fileID: 91658855}
 --- !u!114 &91658855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +838,7 @@ MonoBehaviour:
   oneStar: {fileID: 1590603556}
   twoStar: {fileID: 976625677}
   threeStar: {fileID: 154356947}
+  levelButton: {fileID: 271312619}
 --- !u!114 &271312619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1222,6 +1224,7 @@ MonoBehaviour:
   oneStar: {fileID: 1684217522}
   twoStar: {fileID: 1813333011}
   threeStar: {fileID: 839845760}
+  levelButton: {fileID: 368380099}
 --- !u!114 &368380099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,6 +1835,7 @@ MonoBehaviour:
   oneStar: {fileID: 1037028819}
   twoStar: {fileID: 1741389447}
   threeStar: {fileID: 1559950308}
+  levelButton: {fileID: 454883081}
 --- !u!114 &454883081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3934,6 +3938,7 @@ MonoBehaviour:
   oneStar: {fileID: 954488746}
   twoStar: {fileID: 1121870201}
   threeStar: {fileID: 193625440}
+  levelButton: {fileID: 1141241383}
 --- !u!114 &1141241383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4173,6 +4178,7 @@ MonoBehaviour:
   oneStar: {fileID: 2003176382}
   twoStar: {fileID: 440889473}
   threeStar: {fileID: 749696404}
+  levelButton: {fileID: 1182974760}
 --- !u!114 &1182974760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4980,6 +4986,7 @@ MonoBehaviour:
   oneStar: {fileID: 412116290}
   twoStar: {fileID: 1132060098}
   threeStar: {fileID: 889584777}
+  levelButton: {fileID: 1490362789}
 --- !u!114 &1490362789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5140,6 +5147,7 @@ MonoBehaviour:
   oneStar: {fileID: 1243762487}
   twoStar: {fileID: 1432419017}
   threeStar: {fileID: 1644018354}
+  levelButton: {fileID: 1504401509}
 --- !u!114 &1504401509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,6 +6133,7 @@ MonoBehaviour:
   oneStar: {fileID: 1699923988}
   twoStar: {fileID: 1066162710}
   threeStar: {fileID: 818831629}
+  levelButton: {fileID: 1785717048}
 --- !u!114 &1785717048
 MonoBehaviour:
   m_ObjectHideFlags: 0

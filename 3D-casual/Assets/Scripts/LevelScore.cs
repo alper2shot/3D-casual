@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelScore : MonoBehaviour
 {
@@ -13,11 +14,19 @@ public class LevelScore : MonoBehaviour
     public GameObject oneStar;
     public GameObject twoStar;
     public GameObject threeStar;
+    public Button levelButton;
 
+    private void Start()
+    {
+        levelButton.interactable = isLevelActive;
+    }
+    
     private void Update()
     {
 
         if (isLevelActive) {
+
+            levelButton.interactable = true;
 
             activeImage.SetActive(true);
             passiveImage.SetActive(false);
@@ -49,6 +58,9 @@ public class LevelScore : MonoBehaviour
                 threeStar.SetActive(true);
             }
         }
+
+    
+   
     }
 
     public void LoadScene()
