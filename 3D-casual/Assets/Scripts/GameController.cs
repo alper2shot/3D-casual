@@ -5,21 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public int levelNo;
+    
     public bool canSpawnBall=false;
     public bool groundPlane=false;
-    private GameObject activatedBall;
     private bool ok = true;
 
     public float threeStarScore, twoStarScore;
+
     private int starCount=0;
+    public int ballCount;
+    public int levelNo;
 
     private Vector3 ballStartPos;
 
+    private GameObject activatedBall;
     public GameObject balls;
     public GameObject[] newBall = new GameObject[10];
 
-    public int ballCount;
+    public Animator animator;
+    
    
     void Start()
     {
@@ -83,9 +87,10 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
-    void LoadNewScene()
+    IEnumerator LoadNewScene()
     {
-
+        //animator.SetTrigger("");
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
