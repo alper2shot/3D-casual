@@ -66,21 +66,6 @@ public class GameController : MonoBehaviour
 
     }
 
-    IEnumerator Waiter()
-    {
-        yield return new WaitForSeconds(3);
-    }
-
-    void LoadWinScene()
-    {
-
-    }
-
-    void LoadLoseScene()
-    {
-
-    }
-
     void LoadLevelMenu()
     {
         GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>().enabled = true;
