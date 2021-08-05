@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LevelScore : MonoBehaviour
 {
+    
     public int starCount;
     public int sceneNo;
     public bool isLevelActive;
@@ -15,6 +16,7 @@ public class LevelScore : MonoBehaviour
     public GameObject twoStar;
     public GameObject threeStar;
     public Button levelButton;
+    public Animator animator;
 
     private void Start()
     {
@@ -63,11 +65,18 @@ public class LevelScore : MonoBehaviour
    
     }
 
-    public void LoadScene()
+    IEnumerator AnimationWaiter()
     {
-        //add animation 
-        SceneManager.LoadScene(sceneNo +2);
+        animator.SetTrigger("end");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneNo + 2);
         transform.root.gameObject.GetComponent<Canvas>().GetComponent<Canvas>().enabled = false;
     }
+    
+    public void LoadScene()
+    {
 
+        StartCoroutine(AnimationWaiter());
+    }
+    
 }

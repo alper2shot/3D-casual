@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GoHome : MonoBehaviour
 {
+
+
     public void LoadHomeScene()
     {
         SceneManager.LoadScene(0);

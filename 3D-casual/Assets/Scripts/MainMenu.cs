@@ -8,13 +8,20 @@ public class MainMenu : MonoBehaviour
     private bool playedOnce;
     public Animator animator;
 
+    IEnumerator Transition()
+    {
+        animator.SetTrigger("end");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void Play()
     {
         playedOnce = GameObject.FindGameObjectWithTag("Tracker").GetComponent<PlayButtonTracker>().playedOnce;
 
         if (!playedOnce)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StartCoroutine(Transition());
             GameObject.FindGameObjectWithTag("Tracker").GetComponent<PlayButtonTracker>().playedOnce = true;
         }
         
@@ -29,10 +36,5 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator PlayTransition()
-    {
-        //animator.SetTrigger("");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
 }
