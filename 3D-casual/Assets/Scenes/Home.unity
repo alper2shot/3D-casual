@@ -593,6 +593,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5929367318958222876, guid: a51b5019d2aba48f49d8c9ead3984dbe,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929367318958222876, guid: a51b5019d2aba48f49d8c9ead3984dbe,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929367318958222876, guid: a51b5019d2aba48f49d8c9ead3984dbe,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5929367318958222877, guid: a51b5019d2aba48f49d8c9ead3984dbe,
         type: 3}
       propertyPath: m_RootOrder
@@ -964,6 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809ac7b394fa34fe89d4d498e0e19711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &980143145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1691,21 @@ PrefabInstance:
     - target: {fileID: 2428378580648893813, guid: 59cc532571e0f4724828b7fe9863821d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428378580648893814, guid: 59cc532571e0f4724828b7fe9863821d,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428378580648893814, guid: 59cc532571e0f4724828b7fe9863821d,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428378580648893814, guid: 59cc532571e0f4724828b7fe9863821d,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
