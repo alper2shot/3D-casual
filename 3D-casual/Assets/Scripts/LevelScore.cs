@@ -16,7 +16,7 @@ public class LevelScore : MonoBehaviour
     public GameObject twoStar;
     public GameObject threeStar;
     public Button levelButton;
-    public Animator animator;
+   
 
     private void Start()
     {
