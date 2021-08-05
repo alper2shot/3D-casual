@@ -16,7 +16,7 @@ public class LevelScore : MonoBehaviour
     public GameObject twoStar;
     public GameObject threeStar;
     public Button levelButton;
-   
+    
 
     private void Start()
     {
@@ -67,7 +67,8 @@ public class LevelScore : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(sceneNo + 2);
+        transform.root.gameObject.GetComponent<DontDestroy>().animatorTrigger = true;
+        SceneManager.LoadScene(sceneNo + 1);
         transform.root.gameObject.GetComponent<Canvas>().GetComponent<Canvas>().enabled = false;
     }
 

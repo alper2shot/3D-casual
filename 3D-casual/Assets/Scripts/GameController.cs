@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     public GameObject balls;
     public GameObject[] newBall = new GameObject[10];
 
-    //public Animator animator;
+    public Animator animator;
     
    
     void Start()
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
             ok = false;
             //LoadNewScene();
 
-            LoadLevelMenu();
+            StartCoroutine(LoadLevelMenu());
             
         }
 
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
             //CalculateSuccess();
             //Game Over and Ads
             //LoadSameScene();
-            LoadLevelMenu();
+            StartCoroutine(LoadLevelMenu());
         }
 
         if (canSpawnBall && ballCount > 0)
@@ -66,10 +66,12 @@ public class GameController : MonoBehaviour
 
     }
 
-    void LoadLevelMenu()
+    IEnumerator LoadLevelMenu()
     {
-        GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>().enabled = true;
-        SceneManager.LoadScene(2);
+        animator.SetTrigger("end");        
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
+
     }
 
     IEnumerator LoadNewScene()

@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
+    static DontDestroy instance;
+    public bool animatorTrigger = false;
 
-    private void Awake()
+    void Awake()
     {
-        
-        DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this; // In first scene, make us the singleton.
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+            Destroy(gameObject); // On reload, singleton already set, so destroy duplicate.
     }
 }

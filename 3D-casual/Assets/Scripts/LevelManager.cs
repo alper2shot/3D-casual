@@ -6,9 +6,17 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject[] levelStars = new GameObject[20];
 
-    public void Awake()
+    static LevelManager instance;
+
+    void Awake()
     {
-        DontDestroyOnLoad(this); 
+        if (instance == null)
+        {
+            instance = this; // In first scene, make us the singleton.
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+            Destroy(gameObject); // On reload, singleton already set, so destroy duplicate.
     }
 
 }
