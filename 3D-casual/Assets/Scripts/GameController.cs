@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     public GameObject balls;
     public GameObject[] newBall = new GameObject[10];
 
-    public Animator animator;
+    //public Animator animator;
     
    
     void Start()
@@ -48,9 +48,9 @@ public class GameController : MonoBehaviour
             
         }
 
-        if(ballCount == 0 && !groundPlane)
+        if(ballCount == 0)
         {
-            CalculateSuccess();
+            //CalculateSuccess();
             //Game Over and Ads
             //LoadSameScene();
             LoadLevelMenu();

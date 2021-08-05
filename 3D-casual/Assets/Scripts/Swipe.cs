@@ -133,6 +133,11 @@ public class Swipe : MonoBehaviour
 
     public void OnBecameInvisible()
     {
+        if (once)
+        {
+            gameObject.GetComponent<TrailRenderer>().emitting = false;
+            controller.GetComponent<GameController>().canSpawnBall = true;
+        }
         gameObject.SetActive(false);
     }
 }
