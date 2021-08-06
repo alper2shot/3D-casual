@@ -67,9 +67,16 @@ public class LevelScore : MonoBehaviour
 
     public void LoadScene()
     {
+        StartCoroutine(SceneLoader());
+    }
+
+    IEnumerator SceneLoader()
+    {
         transform.root.gameObject.GetComponent<DontDestroy>().animatorTrigger = true;
-        SceneManager.LoadScene(sceneNo + 1);
+        yield return new WaitForSeconds(1);
         transform.root.gameObject.GetComponent<Canvas>().GetComponent<Canvas>().enabled = false;
+        SceneManager.LoadScene(sceneNo + 1);
+        
     }
 
 
