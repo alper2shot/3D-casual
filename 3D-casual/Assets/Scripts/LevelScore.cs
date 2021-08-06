@@ -28,6 +28,7 @@ public class LevelScore : MonoBehaviour
 
         if (isLevelActive) {
 
+            if(levelButton != null)
             levelButton.interactable = true;
 
             activeImage.SetActive(true);
