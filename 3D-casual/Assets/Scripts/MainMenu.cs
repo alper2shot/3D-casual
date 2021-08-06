@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    private bool playedOnce;
     public Animator animator;
 
     IEnumerator Transition()
@@ -17,18 +16,9 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        playedOnce = GameObject.FindGameObjectWithTag("Tracker").GetComponent<PlayButtonTracker>().playedOnce;
 
-        if (!playedOnce)
-        {
-            StartCoroutine(Transition());
-            GameObject.FindGameObjectWithTag("Tracker").GetComponent<PlayButtonTracker>().playedOnce = true;
-        }
-        
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        }
+       StartCoroutine(Transition());
+
     }
 
     public void Quit()
