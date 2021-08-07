@@ -46,8 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canSpawnBall: 0
   groundPlane: 0
-  ball: {fileID: 0}
-  ballCount: 10
+  threeStarScore: 3
+  twoStarScore: 2
+  ballCount: 5
+  levelNo: 1
+  balls: {fileID: 0}
+  newBall:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pauseButton: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1272605301129748278
 MonoBehaviour:
   m_ObjectHideFlags: 0

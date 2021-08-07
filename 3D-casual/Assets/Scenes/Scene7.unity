@@ -1070,6 +1070,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1782357989}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1782357991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1785170250, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1782357989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1819374711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1542,6 +1548,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1782357990}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1782357991}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: twoStarScore

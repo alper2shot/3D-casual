@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     private GameObject activatedBall;
     public GameObject balls;
     public GameObject[] newBall = new GameObject[10];
+    public GameObject pauseButton;
 
     public Animator animator;
     
@@ -68,6 +69,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator LoadLevelMenu()
     {
+        pauseButton.SetActive(false);
         animator.SetTrigger("end");        
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);

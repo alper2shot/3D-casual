@@ -892,6 +892,12 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1016742990}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016742992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1785170250, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1016742990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1047599215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,6 +1275,11 @@ PrefabInstance:
       propertyPath: ballCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1016742992}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: twoStarScore

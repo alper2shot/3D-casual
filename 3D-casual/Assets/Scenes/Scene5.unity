@@ -1369,6 +1369,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1913750170}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
       propertyPath: twoStarScore
       value: 2
       objectReference: {fileID: 0}
@@ -1776,6 +1781,12 @@ PrefabInstance:
 --- !u!95 &1913750169 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2791703634407102789, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1913750168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1913750170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1785170250, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
     type: 3}
   m_PrefabInstance: {fileID: 1913750168}
   m_PrefabAsset: {fileID: 0}
