@@ -1560,6 +1560,11 @@ PrefabInstance:
       objectReference: {fileID: 1782357990}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
+      propertyPath: ballCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
       propertyPath: starPanel
       value: 
       objectReference: {fileID: 1782357992}
@@ -1571,12 +1576,17 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: twoStarScore
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: threeStarScore
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: newBall.Array.size
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd210aa7a6cab4c30acb612422a65a9b, type: 3}
