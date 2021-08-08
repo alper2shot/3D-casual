@@ -774,6 +774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1110434047, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1366546515}
     - target: {fileID: 2791703634449660844, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -895,6 +899,12 @@ Animator:
 --- !u!1 &1016742992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1785170250, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1016742990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016742993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1110434043, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
     type: 3}
   m_PrefabInstance: {fileID: 1016742990}
   m_PrefabAsset: {fileID: 0}
@@ -1275,6 +1285,11 @@ PrefabInstance:
       propertyPath: ballCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: starPanel
+      value: 
+      objectReference: {fileID: 1016742993}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: pauseButton

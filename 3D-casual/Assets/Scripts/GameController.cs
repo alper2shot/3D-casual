@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
 
     public float threeStarScore, twoStarScore;
 
-    private int starCount=0;
+    public int starCount=0;
     public int ballCount;
     public int levelNo;
 
@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     public GameObject balls;
     public GameObject[] newBall = new GameObject[10];
     public GameObject pauseButton;
-
+    public GameObject starPanel;
     public Animator animator;
     
    
@@ -43,18 +43,16 @@ public class GameController : MonoBehaviour
             ActivateNextScene();
 
             ok = false;
-            //LoadNewScene();
 
-            StartCoroutine(LoadLevelMenu());
+            starPanel.SetActive(true);
+            //StartCoroutine(LoadLevelMenu());
             
         }
 
         if(ballCount == 0)
         {
-            //CalculateSuccess();
-            //Game Over and Ads
-            //LoadSameScene();
-            StartCoroutine(LoadLevelMenu());
+            starPanel.SetActive(true);
+            //StartCoroutine(LoadLevelMenu());
         }
 
         if (canSpawnBall && ballCount > 0)
@@ -73,22 +71,6 @@ public class GameController : MonoBehaviour
         animator.SetTrigger("end");        
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
-
-    }
-
-    IEnumerator LoadNewScene()
-    {
-        //animator.SetTrigger("");
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
-
-    void LoadSameScene()
-    {
-  
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
 
     }
 

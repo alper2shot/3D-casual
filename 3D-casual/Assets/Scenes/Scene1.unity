@@ -430,6 +430,11 @@ PrefabInstance:
       objectReference: {fileID: 1262098616}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
+      propertyPath: starPanel
+      value: 
+      objectReference: {fileID: 1110434043}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 2791703635568525822}
@@ -578,6 +583,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c864f7aaa96d54c058b9b75f3ce19e31, type: 3}
+--- !u!1 &1110434043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1110434043, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2791703635568525821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1210474125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,10 +1104,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1129528875, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 1110434047, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1985308836}
     - target: {fileID: 2791703634449660844, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1207,11 +1218,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8024919800495328864, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1262098616}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
 --- !u!1 &2791703635568525822 stripped

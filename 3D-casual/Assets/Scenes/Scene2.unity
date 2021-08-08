@@ -823,18 +823,33 @@ PrefabInstance:
       objectReference: {fileID: 1297941533}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
+      propertyPath: ballCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: starPanel
+      value: 
+      objectReference: {fileID: 1297941535}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 1297941534}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: twoStarScore
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: threeStarScore
-      value: 7
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
+        type: 3}
+      propertyPath: newBall.Array.size
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd210aa7a6cab4c30acb612422a65a9b, type: 3}
@@ -920,6 +935,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1110434047, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1256672971}
     - target: {fileID: 2791703634449660844, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1041,6 +1060,12 @@ Animator:
 --- !u!1 &1297941534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1785170250, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1297941532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1297941535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1110434043, guid: bbd329fcc93a840ad9b443ab4c6edf6a,
     type: 3}
   m_PrefabInstance: {fileID: 1297941532}
   m_PrefabAsset: {fileID: 0}

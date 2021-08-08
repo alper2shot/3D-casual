@@ -8,6 +8,7 @@ public class TransitionCanvas : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject pauseButton;
+    
 
     public void PauseButton()
     {
@@ -36,4 +37,9 @@ public class TransitionCanvas : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void NextLevelButton()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
