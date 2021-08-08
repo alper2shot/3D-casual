@@ -1537,7 +1537,7 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: ballCount
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
@@ -1552,17 +1552,17 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: twoStarScore
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: threeStarScore
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: newBall.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd210aa7a6cab4c30acb612422a65a9b, type: 3}
@@ -1877,6 +1877,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1110434047, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1714298129}
+    - target: {fileID: 1825028821, guid: bbd329fcc93a840ad9b443ab4c6edf6a, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1714298129}
