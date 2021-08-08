@@ -51,7 +51,8 @@ public class GameController : MonoBehaviour
 
         if(ballCount == 0)
         {
-            starPanel.SetActive(true);
+            StartCoroutine(BallWaiter());
+            //starPanel.SetActive(true);
             //StartCoroutine(LoadLevelMenu());
         }
 
@@ -72,6 +73,12 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
 
+    }
+
+    IEnumerator BallWaiter()
+    {
+        yield return new WaitForSeconds(3);
+        starPanel.SetActive(true);
     }
 
     /*
