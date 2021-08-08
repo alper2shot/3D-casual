@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelMenuPanel : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class LevelMenuPanel : MonoBehaviour
         animeTrigger = canvasStay.GetComponent<DontDestroy>().animatorTrigger;
         if (animeTrigger && once)
         {
-            
+            gameObject.GetComponent<Image>().raycastTarget = true;
             animator.SetTrigger("end");
             once = false;
             canvasStay.GetComponent<DontDestroy>().animatorTrigger = false;

@@ -936,6 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1138050539}
+  panel: {fileID: 1138050537}
 --- !u!1 &980143145
 GameObject:
   m_ObjectHideFlags: 0
