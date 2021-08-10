@@ -26,7 +26,9 @@ public class LevelManager : MonoBehaviour
             if(PlayerPrefs.HasKey(a.ToString()))
             {
                 levelStars[a - 1].GetComponent<LevelScore>().starCount = PlayerPrefs.GetInt(a.ToString());
+
             }
+
         }
         
     }

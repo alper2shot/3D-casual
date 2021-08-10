@@ -31,7 +31,7 @@ public class Banner : MonoBehaviour
         */
 
         // Create a 320x50 banner at the top of the screen.
-        this.bannerView = new BannerView(BannerAdID, AdSize.Banner, AdPosition.Top);
+        this.bannerView = new BannerView(BannerAdID, AdSize.Banner, AdPosition.Bottom);
 
         // Called when an ad request has successfully loaded.
         this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;
@@ -57,22 +57,22 @@ public class Banner : MonoBehaviour
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdLoaded event received");
+       // MonoBehaviour.print("HandleAdLoaded event received");
     }
 
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        MonoBehaviour.print("HandleFailedToReceiveAd event received with message:");
+        //MonoBehaviour.print("HandleFailedToReceiveAd event received with message:");
     }
 
     public void HandleOnAdOpened(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdOpened event received");
+       // MonoBehaviour.print("HandleAdOpened event received");
     }
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdClosed event received");
+        //MonoBehaviour.print("HandleAdClosed event received");
     }
 
 }

@@ -9,6 +9,7 @@ public class LevelScore : MonoBehaviour
     
     public int starCount;
     public int sceneNo;
+    public static int openTilThis;
     public bool isLevelActive;
     public GameObject activeImage;
     public GameObject passiveImage;
@@ -20,11 +21,18 @@ public class LevelScore : MonoBehaviour
 
     private void Start()
     {
-        levelButton.interactable = isLevelActive;
+
+        openTilThis = PlayerPrefs.GetInt("openTilThis");
+        //levelButton.interactable = isLevelActive;
     }
     
     private void Update()
     {
+        
+        if (sceneNo <= openTilThis)
+        {
+            isLevelActive = true;
+        }
 
         if (isLevelActive) {
 
