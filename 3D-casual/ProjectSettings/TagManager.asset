@@ -9,6 +9,8 @@ TagManager:
   - LevelManager
   - Canvas
   - Tracker
+  - NextLevelButton
+  - LevelMenuButton
   layers:
   - Default
   - TransparentFX

@@ -109,22 +109,30 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdLoaded event received");
+        //MonoBehaviour.print("HandleAdLoaded event received");
     }
 
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        MonoBehaviour.print("HandleFailedToReceiveAd event received with message:");
+        if (gameObject.CompareTag("NextLevelButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+        else if (gameObject.CompareTag("LevelMenuButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+        
     }
 
     public void HandleOnAdOpened(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdOpened event received");
+        //MonoBehaviour.print("HandleAdOpened event received");
     }
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
-        MonoBehaviour.print("HandleAdClosed event received");
+        if(gameObject.CompareTag("NextLevelButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+        else if(gameObject.CompareTag("LevelMenuButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+        //MonoBehaviour.print("HandleAdClosed event received");
     }
 
     /*
