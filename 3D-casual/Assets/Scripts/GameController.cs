@@ -134,7 +134,8 @@ public class GameController : MonoBehaviour
         GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
             .levelStars[levelNo-1].GetComponent<LevelScore>().starCount = starCount;
 
-       
+        PlayerPrefs.SetInt((levelNo - 1).ToString(), starCount);
+        PlayerPrefs.Save();
     }
 
     void ActivateNextScene()

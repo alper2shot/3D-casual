@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject[] levelStars = new GameObject[20];
+    public GameObject[] levelStars = new GameObject[24];
 
     static LevelManager instance;
 
@@ -19,4 +19,15 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject); // On reload, singleton already set, so destroy duplicate.
     }
 
+    void Start()
+    {
+        for(int a = 24; a>0; a--)
+        {
+            if(PlayerPrefs.HasKey(a.ToString()))
+            {
+                levelStars[a - 1].GetComponent<LevelScore>().starCount = PlayerPrefs.GetInt(a.ToString());
+            }
+        }
+        
+    }
 }
