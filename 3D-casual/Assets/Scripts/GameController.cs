@@ -105,10 +105,13 @@ public class GameController : MonoBehaviour
 
     void ActivateBalls()
     {
-        activatedBall = newBall[ballCount - 1];
-        activatedBall.GetComponent<Swipe>().isBallActive = true;
-        activatedBall.SetActive(true);
-        canSpawnBall = false;
+        if (ballCount-1 >= 0)
+        {
+            activatedBall = newBall[ballCount - 1];
+            activatedBall.GetComponent<Swipe>().isBallActive = true;
+            activatedBall.SetActive(true);
+            canSpawnBall = false;
+        }
     }
 
     void DeactivateBalls()

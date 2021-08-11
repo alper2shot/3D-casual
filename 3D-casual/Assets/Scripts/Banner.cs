@@ -16,6 +16,7 @@ public class Banner : MonoBehaviour
     {
         RequestBanner();
         MobileAds.Initialize(initStatus => { });
+        ShowBannerAD();
     }
 
     public void RequestBanner()
@@ -41,8 +42,7 @@ public class Banner : MonoBehaviour
         this.bannerView.OnAdOpening += this.HandleOnAdOpened;
         // Called when the user returned from the app after an ad click.
         this.bannerView.OnAdClosed += this.HandleOnAdClosed;
-        
-        ShowBannerAD();
+       
 
     }
 
