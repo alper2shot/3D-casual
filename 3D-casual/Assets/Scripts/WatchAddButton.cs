@@ -91,5 +91,7 @@ public class WatchAddButton : MonoBehaviour
             PlayerPrefs.SetInt("openTilThis", levelNo + 1);
 
         PlayerPrefs.Save();
+
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().ActivateNextScene();
     }
 }

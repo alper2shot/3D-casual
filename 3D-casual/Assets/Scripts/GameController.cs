@@ -156,7 +156,7 @@ public class GameController : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    void ActivateNextScene()
+    public void ActivateNextScene()
     {
         if (GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
             .levelStars[levelNo] != null && starCount != 0)
