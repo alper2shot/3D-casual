@@ -55,6 +55,11 @@ public class Banner : MonoBehaviour
         this.bannerView.LoadAd(request);
     }
 
+    public void Hide()
+    {
+        this.bannerView.Destroy();
+    }
+
     public void HandleOnAdLoaded(object sender, EventArgs args)
     {
        // MonoBehaviour.print("HandleAdLoaded event received");
