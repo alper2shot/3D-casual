@@ -85,7 +85,7 @@ public class Swipe : MonoBehaviour
         //Mouse Settings
 
 
-        if (isBallActive)
+        if (isBallActive && !controller.GetComponent<GameController>().starPanel.activeInHierarchy )
         {
             if (Input.GetMouseButtonDown(0) && !isTouched)
             {
