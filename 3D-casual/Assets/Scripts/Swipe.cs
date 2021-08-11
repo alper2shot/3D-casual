@@ -137,6 +137,7 @@ public class Swipe : MonoBehaviour
         if (once)
         {
             gameObject.GetComponent<TrailRenderer>().emitting = false;
+            if(controller != null)
             controller.GetComponent<GameController>().canSpawnBall = true;
             once = false;
         }
