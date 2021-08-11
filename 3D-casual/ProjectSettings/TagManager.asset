@@ -11,6 +11,7 @@ TagManager:
   - Tracker
   - NextLevelButton
   - LevelMenuButton
+  - PlaySound
   layers:
   - Default
   - TransparentFX
