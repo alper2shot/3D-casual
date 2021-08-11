@@ -131,13 +131,23 @@ public class GameController : MonoBehaviour
             starCount = 1;
         }
 
-        GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
-            .levelStars[levelNo-1].GetComponent<LevelScore>().starCount = starCount;
+        if (!PlayerPrefs.HasKey(levelNo.ToString()))
+        {
+            GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
+            .levelStars[levelNo - 1].GetComponent<LevelScore>().starCount = starCount;
 
-        PlayerPrefs.SetInt((levelNo).ToString(), starCount);
+            PlayerPrefs.SetInt((levelNo).ToString(), starCount);
+        }
+        else if(PlayerPrefs.GetInt(levelNo.ToString()) < starCount)
+        {
+            GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
+            .levelStars[levelNo - 1].GetComponent<LevelScore>().starCount = starCount;
+
+            PlayerPrefs.SetInt((levelNo).ToString(), starCount);
+        }
 
         if(GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
-            .levelStars[levelNo] != null)
+            .levelStars[levelNo] != null && PlayerPrefs.GetInt("openTilThis") < levelNo + 1)
             PlayerPrefs.SetInt("openTilThis", levelNo+ 1);
 
         PlayerPrefs.Save();
