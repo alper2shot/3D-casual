@@ -10,7 +10,7 @@ public class TransitionCanvas : MonoBehaviour
 
     private void Start()
     {
-        PlaySound.ChangeVolume(0.2f);
+        PlaySound.ChangeVolume(0f);
     }
 
     public void PauseButton()

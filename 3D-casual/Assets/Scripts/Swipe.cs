@@ -6,6 +6,9 @@ public class Swipe : MonoBehaviour
 {
     public GameObject controller;
 
+    private int hitCount=0;
+    private bool canHit = true;
+
     public bool isBallActive = false;
     public bool isTouched = false;
     private bool once = true;
@@ -113,6 +116,7 @@ public class Swipe : MonoBehaviour
                 {
 
                     GiveForce();
+                    AudioManagerScript.PlaySound(AudioManagerScript.Sound.swipe);
                 }
 
             }
@@ -121,8 +125,23 @@ public class Swipe : MonoBehaviour
 
     }
 
+    IEnumerator BallHit()
+    {
+        canHit = false;
+        yield return new WaitForSeconds(0.2f);
+        canHit = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        if (canHit && rb.velocity.magnitude >= 5 && hitCount < 3)
+        {
+            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position);
+            hitCount++;
+            StartCoroutine(BallHit());
+
+        }
+        
         if (once && isBallActive)
         {
             gameObject.GetComponent<TrailRenderer>().emitting = false;

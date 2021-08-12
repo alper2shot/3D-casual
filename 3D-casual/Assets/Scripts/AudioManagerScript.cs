@@ -13,6 +13,8 @@ public class AudioManagerScript : MonoBehaviour
     public enum Sound
     {
         mainTheme,
+        swipe,
+        ballHit,
     }
 
     public static void PlaySound(Sound sound, Vector3 position)
@@ -21,15 +23,18 @@ public class AudioManagerScript : MonoBehaviour
         soundGameObject.transform.position = position;
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.clip = GetAudioClip(sound);
-        audioSource.maxDistance = 30f;
+       
+        audioSource.maxDistance = 60f;
         audioSource.spatialBlend = 1f;
         audioSource.rolloffMode = AudioRolloffMode.Linear;
-        audioSource.dopplerLevel = 0f;
-
+        audioSource.dopplerLevel = 2f;
+        
         audioSource.Play();
         Object.Destroy(soundGameObject, audioSource.clip.length);
 
     }
+
+   
 
     public static void PlaySound(Sound sound)
     {
@@ -42,6 +47,7 @@ public class AudioManagerScript : MonoBehaviour
         }
         oneShotAudioSource.PlayOneShot(GetAudioClip(sound), 1f);
     }
+
 
     //music
     public static AudioSource PlaySoundInLoop(Sound sound)
