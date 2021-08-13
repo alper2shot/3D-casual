@@ -134,10 +134,11 @@ public class Swipe : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (canHit && rb.velocity.magnitude >= 5 && hitCount < 3)
+        if (canHit && rb.velocity.magnitude >= 5)
         {
-            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position);
-            hitCount++;
+            Debug.Log(rb.velocity.magnitude);
+            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.02f * rb.velocity.magnitude);
+            //hitCount++;
             StartCoroutine(BallHit());
 
         }

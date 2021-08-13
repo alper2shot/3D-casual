@@ -18,7 +18,7 @@ public class AudioManagerScript : MonoBehaviour
         click,
     }
 
-    public static void PlaySound(Sound sound, Vector3 position)
+    public static void PlaySound(Sound sound, Vector3 position, float volume)
     {
         GameObject soundGameObject = new GameObject("Sound");
         soundGameObject.transform.position = position;
@@ -29,7 +29,7 @@ public class AudioManagerScript : MonoBehaviour
         audioSource.spatialBlend = 1f;
         audioSource.rolloffMode = AudioRolloffMode.Linear;
         audioSource.dopplerLevel = 2f;
-        
+        audioSource.volume = volume;
         audioSource.Play();
         Object.Destroy(soundGameObject, audioSource.clip.length);
 
