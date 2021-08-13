@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class PlaySound : MonoBehaviour
 {
     static PlaySound instance;
-    public static AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Awake()
     {
@@ -30,10 +30,4 @@ public class PlaySound : MonoBehaviour
     {
         audioSource.Play();
     }
-
-    public static void ChangeVolume(float Volume)
-    {
-         audioSource.volume = Volume;
-    }
-    
 }

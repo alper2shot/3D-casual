@@ -8,11 +8,6 @@ public class TransitionCanvas : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject pauseButton;
 
-    private void Start()
-    {
-        PlaySound.ChangeVolume(0f);
-    }
-
     public void PauseButton()
     {
         pauseMenu.SetActive(true);
