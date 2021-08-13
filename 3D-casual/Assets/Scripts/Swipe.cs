@@ -137,7 +137,7 @@ public class Swipe : MonoBehaviour
         if (canHit && rb.velocity.magnitude >= 5)
         {
             Debug.Log(rb.velocity.magnitude);
-            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.01f * rb.velocity.magnitude);
+            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.015f * rb.velocity.magnitude);
             //hitCount++;
             StartCoroutine(BallHit());
 
