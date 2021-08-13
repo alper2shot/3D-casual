@@ -137,6 +137,15 @@ public class Swipe : MonoBehaviour
         if (canHit && rb.velocity.magnitude >= 5)
         {
             Debug.Log(rb.velocity.magnitude);
+            if (collision.gameObject.CompareTag("Wooden"))
+            {
+                if(rb.velocity.magnitude <= 15)
+                AudioManagerScript.PlaySound(AudioManagerScript.Sound.wooden2, transform.position, 0.05f * rb.velocity.magnitude);
+                else
+                    AudioManagerScript.PlaySound(AudioManagerScript.Sound.wooden, transform.position, 0.05f * rb.velocity.magnitude);
+            }
+            
+            else
             AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.015f * rb.velocity.magnitude);
             //hitCount++;
             StartCoroutine(BallHit());

@@ -16,6 +16,8 @@ public class AudioManagerScript : MonoBehaviour
         swipe,
         ballHit,
         click,
+        wooden,
+        wooden2,
     }
 
     public static void PlaySound(Sound sound, Vector3 position, float volume)

@@ -12,6 +12,7 @@ TagManager:
   - NextLevelButton
   - LevelMenuButton
   - PlaySound
+  - Wooden
   layers:
   - Default
   - TransparentFX
