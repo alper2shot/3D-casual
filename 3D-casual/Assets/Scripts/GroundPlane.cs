@@ -8,21 +8,21 @@ public class GroundPlane : MonoBehaviour
     public int counter = 0;
     public GameObject controller;
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        if(collider.CompareTag("Block"))
-        counter++;
-
-        collider.tag = "Counted";
-        
-
-    }
-
     void Update()
     {
         if(needCount == counter)
         {
             controller.GetComponent<GameController>().groundPlane = true;
+        }
+
+    }
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Block") && !collider.CompareTag("Counted"))
+        {
+            gameObject.transform.root.GetComponent<GroundPlane>().counter++;
+            AudioManagerScript.PlaySound(AudioManagerScript.Sound.groundPlane);
+            collider.tag = "Counted";
         }
     }
 }

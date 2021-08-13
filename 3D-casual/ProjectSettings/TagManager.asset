@@ -13,6 +13,7 @@ TagManager:
   - LevelMenuButton
   - PlaySound
   - Wooden
+  - GroundPlane
   layers:
   - Default
   - TransparentFX

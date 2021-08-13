@@ -18,6 +18,7 @@ public class AudioManagerScript : MonoBehaviour
         click,
         wooden,
         wooden2,
+        groundPlane,
     }
 
     public static void PlaySound(Sound sound, Vector3 position, float volume)

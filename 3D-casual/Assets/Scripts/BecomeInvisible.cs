@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class BecomeInvisible : MonoBehaviour
 {
+
     public void OnBecameInvisible()
     {
+
         gameObject.SetActive(false);
+
     }
+
 }

@@ -30,19 +30,22 @@ public class TransitionCanvas : MonoBehaviour
 
     public void LevelMenuButton()
     {
-        Time.timeScale = 1f;
+        
         SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 
     public void RestartButton()
     {
-        Time.timeScale = 1f;
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
     public void NextLevelButton()
     {
-        Time.timeScale = 1f;
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 }
