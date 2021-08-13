@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2392888}
   - component: {fileID: 8509426266048398519}
   - component: {fileID: 1421573055412317279}
+  - component: {fileID: 9072407846439583855}
   m_Layer: 7
   m_Name: Kegel
   m_TagString: Block
@@ -144,3 +145,15 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &9072407846439583855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b829dd2686d24cc1be22bba3d261e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
