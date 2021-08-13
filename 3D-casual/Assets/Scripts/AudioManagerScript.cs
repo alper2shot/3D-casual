@@ -15,6 +15,7 @@ public class AudioManagerScript : MonoBehaviour
         mainTheme,
         swipe,
         ballHit,
+        click,
     }
 
     public static void PlaySound(Sound sound, Vector3 position)
@@ -24,7 +25,7 @@ public class AudioManagerScript : MonoBehaviour
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.clip = GetAudioClip(sound);
        
-        audioSource.maxDistance = 60f;
+        audioSource.maxDistance = 55f;
         audioSource.spatialBlend = 1f;
         audioSource.rolloffMode = AudioRolloffMode.Linear;
         audioSource.dopplerLevel = 2f;

@@ -81,6 +81,7 @@ public class LevelScore : MonoBehaviour
 
     IEnumerator SceneLoader()
     {
+        AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
         transform.root.gameObject.GetComponent<DontDestroy>().animatorTrigger = true;
         yield return new WaitForSeconds(1);
         transform.root.gameObject.GetComponent<Canvas>().GetComponent<Canvas>().enabled = false;

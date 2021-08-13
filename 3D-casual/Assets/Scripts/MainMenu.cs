@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator Transition()
     {
+        AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
         panel.raycastTarget = true;
         animator.SetTrigger("end");
         yield return new WaitForSeconds(1);
@@ -19,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-
+        
        StartCoroutine(Transition());
 
     }
