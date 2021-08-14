@@ -30,7 +30,7 @@ public class OptionsVolume : MonoBehaviour
             slider2.value = PlayerPrefs.GetFloat("musicVolume");
         }
         else
-            PlayerPrefs.SetFloat("musicVolume", 1f);
+            PlayerPrefs.SetFloat("musicVolume", 0.5f);
     }
 
  
