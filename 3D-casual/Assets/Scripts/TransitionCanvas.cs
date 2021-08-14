@@ -10,6 +10,7 @@ public class TransitionCanvas : MonoBehaviour
 
     public void PauseButton()
     {
+        AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
         pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
@@ -18,7 +19,9 @@ public class TransitionCanvas : MonoBehaviour
 
     public void ContinueButton()
     {
+        
         Time.timeScale = 1f;
+        AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
     }
@@ -28,6 +31,7 @@ public class TransitionCanvas : MonoBehaviour
         
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
+        
     }
 
     public void RestartButton()
@@ -35,6 +39,7 @@ public class TransitionCanvas : MonoBehaviour
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
+       
     }
 
     public void NextLevelButton()
@@ -42,5 +47,6 @@ public class TransitionCanvas : MonoBehaviour
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
+      
     }
 }
