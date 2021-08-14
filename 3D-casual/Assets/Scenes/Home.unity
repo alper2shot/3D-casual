@@ -843,7 +843,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1322865288}
   slider2: {fileID: 2130631222}
-  audioSource: {fileID: 1851545706}
 --- !u!4 &567653136
 Transform:
   m_ObjectHideFlags: 0
@@ -2490,12 +2489,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!82 &1851545706 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3889932007804025267, guid: d730f3d80a7eb41e3aba5a27f0df7d3a,
-    type: 3}
-  m_PrefabInstance: {fileID: 3889932008837754909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2130631220
 GameObject:
   m_ObjectHideFlags: 0
