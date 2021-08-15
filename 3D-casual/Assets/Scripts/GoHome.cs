@@ -14,6 +14,7 @@ public class GoHome : MonoBehaviour
 
     IEnumerator Loader()
     {
+        AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
         canvasStay.GetComponent<DontDestroy>().animatorTrigger = true;
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(0);
