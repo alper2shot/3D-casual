@@ -48,8 +48,7 @@ public class Swipe : MonoBehaviour
 
     void GiveForce()
     {
-        startPos.x = 0f;
-        startPos.y = -15f;
+        
         rb.isKinematic = false;
         rb.AddForce(-direction.x * throwForceInX * mass, -direction.y * throwForceInY * mass, throwForceInZ / timeInterval * mass);
         rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
@@ -108,6 +107,8 @@ public class Swipe : MonoBehaviour
                 timeInterval = touchTimeFinish - touchTimeStart;
                 myVectorEnd = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
                 endPos = Camera.main.ScreenToWorldPoint(myVectorEnd);
+                startPos.x = 0f;
+                startPos.y = -15f;
                 direction = startPos - endPos;
 
                 if (timeInterval > restricter)
