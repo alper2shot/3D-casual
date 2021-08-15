@@ -29,6 +29,9 @@ public class Swipe : MonoBehaviour
     float restricter;
 
     [SerializeField]
+    float restricter2;
+
+    [SerializeField]
     float restricterY;
 
     [SerializeField]
@@ -110,6 +113,11 @@ public class Swipe : MonoBehaviour
                 if (timeInterval > restricter)
                 {
                     timeInterval = restricter;
+                }
+
+                if(timeInterval < restricter2)
+                {
+                    timeInterval = restricter2;
                 }
 
                 if (-direction.y > restricterY)
