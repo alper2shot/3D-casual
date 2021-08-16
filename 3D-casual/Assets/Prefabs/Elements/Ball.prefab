@@ -132,8 +132,8 @@ MonoBehaviour:
   mass: 2
   throwForceInX: 50
   throwForceInY: 50
-  restricter: 0.25
-  restricter2: 0.1
+  restricter: 0.2
+  restricter2: 0.05
   restricterY: 1
   throwForceInZ: 300
 --- !u!96 &88697844
