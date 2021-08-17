@@ -90,10 +90,15 @@ public class Swipe : MonoBehaviour
         }
         */
         //Mouse Settings
-
-
-        if (isBallActive && !controller.GetComponent<GameController>().starPanel.activeInHierarchy )
+        if (BallPositioner.isIn)
         {
+            rb.transform.Rotate(15.0f, 0.0f, 0.0f, Space.Self);
+        }
+
+        if (isBallActive && !controller.GetComponent<GameController>().starPanel.activeInHierarchy)
+        {
+            
+
             if (Input.GetMouseButtonDown(0) && !isTouched)
             {
                 touchTimeStart = Time.time;
@@ -103,13 +108,15 @@ public class Swipe : MonoBehaviour
 
             }
 
-            if (Input.GetMouseButtonUp(0) && !isTouched)
+            if (Input.GetMouseButtonUp(0) && !isTouched && BallPositioner.isIn)
             {
                 touchTimeFinish = Time.time;
                 timeInterval = touchTimeFinish - touchTimeStart;
                 myVectorEnd = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 40f);
                 endPos = Camera.main.ScreenToWorldPoint(myVectorEnd);
                 direction = startPos - endPos;
+
+                BallPositioner.MakeFalse();
 
                 if (timeInterval > restricter)
                 {
