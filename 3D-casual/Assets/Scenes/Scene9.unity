@@ -285,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: ballCount
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
