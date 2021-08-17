@@ -43,11 +43,13 @@ public class Swipe : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-     
+        rb.GetComponent<SphereCollider>().enabled = false;
+
     }
 
     void GiveForce()
     {
+        rb.GetComponent<SphereCollider>().enabled = true;
         startPos.x = 0f;
         startPos.y = -15f;
         direction = startPos - endPos;
