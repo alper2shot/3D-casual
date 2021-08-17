@@ -92,7 +92,7 @@ public class Swipe : MonoBehaviour
         //Mouse Settings
         if (BallPositioner.isIn)
         {
-            rb.transform.Rotate(15.0f, 0.0f, 0.0f, Space.Self);
+            rb.transform.Rotate(Input.mousePosition.y * Time.deltaTime / 2, 0f, 0.0f, Space.Self);
         }
 
         if (isBallActive && !controller.GetComponent<GameController>().starPanel.activeInHierarchy)
