@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1272605301129748276}
   - component: {fileID: 1272605301129748279}
-  - component: {fileID: 1272605301129748278}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -48,6 +47,7 @@ MonoBehaviour:
   groundPlane: 0
   threeStarScore: 3
   twoStarScore: 2
+  starCount: 0
   ballCount: 5
   levelNo: 1
   balls: {fileID: 0}
@@ -58,16 +58,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   pauseButton: {fileID: 0}
+  starPanel: {fileID: 0}
   animator: {fileID: 0}
---- !u!114 &1272605301129748278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272605301129748273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc5d89863d4e4076941e2bdc30cf21f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

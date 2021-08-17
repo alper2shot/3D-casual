@@ -702,7 +702,7 @@ PrefabInstance:
     - target: {fileID: 2445883710056698133, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
       propertyPath: restricter
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5293156305283243304, guid: 0918a49a7240746ba9a32d2bd33593c1,
         type: 3}
