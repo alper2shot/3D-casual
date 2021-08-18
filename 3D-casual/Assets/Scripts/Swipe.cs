@@ -92,10 +92,15 @@ public class Swipe : MonoBehaviour
         }
         */
         //Mouse Settings
+
+
         if (BallPositioner.isIn)
         {
-            rb.transform.Rotate(Input.mousePosition.y * Time.deltaTime / 2, 0f, 0.0f, Space.Self);
-        }
+            //transform.Rotate(Input.mousePosition.y * Time.deltaTime / 2, 0f, 0.0f, Space.Self);
+           
+            transform.LookAt(new Vector3((Input.mousePosition.x / 23 - 15),  Input.mousePosition.y/10, 40f));
+           
+        } 
 
         if (isBallActive && !controller.GetComponent<GameController>().starPanel.activeInHierarchy)
         {
