@@ -6,6 +6,8 @@ public class DontDestroy : MonoBehaviour
 {
     static DontDestroy instance;
     public bool animatorTrigger = false;
+    public GameObject chapter1;
+    public GameObject chapter2;
 
     void Awake()
     {
