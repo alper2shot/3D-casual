@@ -94,7 +94,7 @@ public class Swipe : MonoBehaviour
         //Mouse Settings
 
 
-        if (BallPositioner.isIn)
+        if (BallPositioner.isIn && !isTouched)
         {
             //transform.Rotate(Input.mousePosition.y * Time.deltaTime / 2, 0f, 0.0f, Space.Self);
            
