@@ -1635,6 +1635,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3385705493168750153, guid: bbbf82a66577b4994b6b5dcdf5fcb1a7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbf82a66577b4994b6b5dcdf5fcb1a7, type: 3}
 --- !u!1001 &7531268352060858650
@@ -1703,6 +1708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962627281106936414, guid: e1ee46bcf705348259aafb3aa36320e4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ee46bcf705348259aafb3aa36320e4, type: 3}
@@ -1782,6 +1792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 2-Stick-H-1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718110644426398769, guid: 547d8824f1eb34ddc88fbe241e62ac12,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 547d8824f1eb34ddc88fbe241e62ac12, type: 3}
