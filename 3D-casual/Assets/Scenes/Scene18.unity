@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
       propertyPath: ballCount
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1272605301129748279, guid: fd210aa7a6cab4c30acb612422a65a9b,
         type: 3}
@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 6692434719462584088, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
         type: 3}
       propertyPath: needCount
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6692434719462584088, guid: dfa90fca5fe514fc7b94c2d56fc23d22,
         type: 3}
