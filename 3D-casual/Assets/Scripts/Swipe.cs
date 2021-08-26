@@ -53,7 +53,8 @@ public class Swipe : MonoBehaviour
         startPos.x = 0f;
         startPos.y = -15f;
         direction = startPos - endPos;
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
+        rb.useGravity = true;
         rb.AddForce(-direction.x * throwForceInX * mass, -direction.y * throwForceInY * mass, throwForceInZ / timeInterval * mass);
         rb.AddTorque(Vector3.right * throwForceInZ / timeInterval, ForceMode.Force);
         isTouched = true;
