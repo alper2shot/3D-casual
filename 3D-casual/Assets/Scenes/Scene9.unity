@@ -1643,7 +1643,7 @@ PrefabInstance:
     - target: {fileID: 3385705493168750153, guid: bbbf82a66577b4994b6b5dcdf5fcb1a7,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbbf82a66577b4994b6b5dcdf5fcb1a7, type: 3}
@@ -1722,7 +1722,7 @@ PrefabInstance:
     - target: {fileID: 8962627281106936414, guid: e1ee46bcf705348259aafb3aa36320e4,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 4294967294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ee46bcf705348259aafb3aa36320e4, type: 3}
