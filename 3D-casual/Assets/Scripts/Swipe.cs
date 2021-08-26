@@ -159,7 +159,6 @@ public class Swipe : MonoBehaviour
     {
         if (canHit && rb.velocity.magnitude >= 5)
         {
-            
             if (collision.gameObject.CompareTag("Wooden"))
             {
                 if(rb.velocity.magnitude <= 15)
@@ -169,12 +168,11 @@ public class Swipe : MonoBehaviour
             }
             else if (collision.gameObject.CompareTag("Jumper"))
             {
-                AudioManagerScript.PlaySound(AudioManagerScript.Sound.jumper, transform.position, 0.25f * rb.velocity.magnitude);
+                AudioManagerScript.PlaySound(AudioManagerScript.Sound.jumper, transform.position, 0.5f * rb.velocity.magnitude);
             }
-
             else
             AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.015f * rb.velocity.magnitude);
-            //hitCount++;
+
             StartCoroutine(BallHit());
 
         }
