@@ -167,7 +167,11 @@ public class Swipe : MonoBehaviour
                 else
                     AudioManagerScript.PlaySound(AudioManagerScript.Sound.wooden, transform.position, 0.05f * rb.velocity.magnitude);
             }
-            
+            else if (collision.gameObject.CompareTag("Jumper"))
+            {
+                AudioManagerScript.PlaySound(AudioManagerScript.Sound.jumper, transform.position, 0.25f * rb.velocity.magnitude);
+            }
+
             else
             AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.015f * rb.velocity.magnitude);
             //hitCount++;

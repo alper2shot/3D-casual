@@ -21,6 +21,7 @@ public class AudioManagerScript : MonoBehaviour
         groundPlane,
         loseSound,
         winSound,
+        jumper,
     }
 
     public static void PlaySound(Sound sound, Vector3 position, float volume)
