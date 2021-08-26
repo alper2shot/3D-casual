@@ -172,7 +172,7 @@ public class Swipe : MonoBehaviour
                 AudioManagerScript.PlaySound(AudioManagerScript.Sound.jumper, transform.position, 0.5f * rb.velocity.magnitude);
             }
             else
-            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.015f * rb.velocity.magnitude);
+            AudioManagerScript.PlaySound(AudioManagerScript.Sound.ballHit, transform.position, 0.02f * rb.velocity.magnitude);
 
             StartCoroutine(BallHit());
 
