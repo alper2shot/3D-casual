@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 177029787}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 0.1
+  m_MaxValue: 0.2
   m_WholeNumbers: 0
   m_Value: 0.1
   m_OnValueChanged:
@@ -2791,6 +2791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889932007804025267, guid: d730f3d80a7eb41e3aba5a27f0df7d3a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3889932007804025270, guid: d730f3d80a7eb41e3aba5a27f0df7d3a,
         type: 3}
