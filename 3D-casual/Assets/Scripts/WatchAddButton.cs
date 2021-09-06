@@ -86,8 +86,7 @@ public class WatchAddButton : MonoBehaviour
             PlayerPrefs.SetInt((levelNo).ToString(), 3);
         }
 
-        if (GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
-            .levelStars[levelNo] != null && PlayerPrefs.GetInt("openTilThis") < levelNo + 1)
+        if (levelNo < 24 && PlayerPrefs.GetInt("openTilThis") < levelNo + 1)
             PlayerPrefs.SetInt("openTilThis", levelNo + 1);
 
         PlayerPrefs.Save();

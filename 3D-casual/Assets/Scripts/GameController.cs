@@ -149,8 +149,9 @@ public class GameController : MonoBehaviour
             PlayerPrefs.SetInt((levelNo).ToString(), starCount);
         }
 
-        if(GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
-            .levelStars[levelNo] != null && PlayerPrefs.GetInt("openTilThis") < levelNo + 1)
+        //GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>().levelStars[levelNo] != null
+        if (levelNo < 24 && PlayerPrefs.GetInt("openTilThis") < levelNo + 1)
+
             PlayerPrefs.SetInt("openTilThis", levelNo+ 1);
 
         PlayerPrefs.Save();
@@ -158,8 +159,7 @@ public class GameController : MonoBehaviour
 
     public void ActivateNextScene()
     {
-        if (GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
-            .levelStars[levelNo] != null && starCount != 0)
+        if (levelNo < 24 && starCount != 0)
         {
             GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>()
             .levelStars[levelNo].GetComponent<LevelScore>().isLevelActive = true;
