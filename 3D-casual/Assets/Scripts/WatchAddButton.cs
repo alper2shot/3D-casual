@@ -6,7 +6,7 @@ using GoogleMobileAds.Api;
 
 public class WatchAddButton : MonoBehaviour
 {
-    string RewarededAdID = "ca-app-pub-3940256099942544/5224354917";
+    string RewarededAdID = "ca-app-pub-9789420081213637/2052140319";
 
     private RewardedAd rewardedAd;
     private int levelNo;

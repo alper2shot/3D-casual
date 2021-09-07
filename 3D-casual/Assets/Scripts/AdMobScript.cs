@@ -9,7 +9,7 @@ public class AdMobScript : MonoBehaviour
     //string appID = "ca-app-pub-9789420081213637~9306642947";
 
     //string BannerAdID = "ca-app-pub-3940256099942544/6300978111";
-    string IntersitialAdID = "ca-app-pub-3940256099942544/1033173712";
+    string IntersitialAdID = "ca-app-pub-9789420081213637/2462848638";
     //string RewarededAdID = "ca-app-pub-3940256099942544/5224354917";
 
     //private BannerView bannerView;

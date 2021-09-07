@@ -6,7 +6,7 @@ using System;
 
 public class Banner : MonoBehaviour
 {
-    string BannerAdID = "ca-app-pub-3940256099942544/6300978111";
+    string BannerAdID = "ca-app-pub-9789420081213637/9631247439";
 
 
     private BannerView bannerView;
