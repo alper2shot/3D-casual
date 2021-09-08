@@ -10,7 +10,8 @@ public class NextBackButtons : MonoBehaviour
     public void Pass()
     {
         AudioManagerScript.PlaySound(AudioManagerScript.Sound.click);
-        first.SetActive(false);
         second.SetActive(true);
+        first.SetActive(false);
+        
     }
 }
