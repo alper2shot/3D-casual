@@ -5331,12 +5331,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.23366857, g: 0.49019608, b: 0.84313726, a: 0.19607843}
-    m_PressedColor: {r: 0.23529412, g: 0.49019608, b: 0.84313726, a: 0.39215687}
-    m_SelectedColor: {r: 0.23529412, g: 0.49019608, b: 0.84313726, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.19607843}
+    m_PressedColor: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5352,7 +5352,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 2145177790}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -21134,7 +21134,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.23366857, g: 0.49019608, b: 0.84313726, a: 0.19607843}
