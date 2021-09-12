@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 624578393}
   - component: {fileID: 624578392}
   - component: {fileID: 624578391}
+  - component: {fileID: 2995468024127503666}
   m_Layer: 5
   m_Name: LevelMenuButton
   m_TagString: LevelMenuButton
@@ -869,7 +870,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3255755066879417186}
+      - m_Target: {fileID: 2995468024127503666}
         m_TargetAssemblyTypeName: AdMobScript, Assembly-CSharp
         m_MethodName: LoadInterstitial
         m_Mode: 1
@@ -881,6 +882,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2995468024127503666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624578389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &641390528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,6 +2021,7 @@ GameObject:
   - component: {fileID: 1407153775}
   - component: {fileID: 1407153774}
   - component: {fileID: 1407153773}
+  - component: {fileID: 8438509507597099744}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: NextLevelButton
@@ -2116,7 +2130,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3255755066879417186}
+      - m_Target: {fileID: 8438509507597099744}
         m_TargetAssemblyTypeName: AdMobScript, Assembly-CSharp
         m_MethodName: LoadInterstitial
         m_Mode: 1
@@ -2128,6 +2142,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8438509507597099744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407153771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1440824045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,7 +3210,6 @@ GameObject:
   - component: {fileID: 2791703634449660850}
   - component: {fileID: 2791703634449660851}
   - component: {fileID: 8024919800495328864}
-  - component: {fileID: 3255755066879417186}
   - component: {fileID: 2791703635568525825}
   m_Layer: 5
   m_Name: TransitionCanvas
@@ -3293,18 +3318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1129528875}
   pauseButton: {fileID: 1785170250}
---- !u!114 &3255755066879417186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2791703634449660848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2791703635568525825
 MonoBehaviour:
   m_ObjectHideFlags: 0
