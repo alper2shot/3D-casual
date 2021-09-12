@@ -105,6 +105,13 @@ public class AdMobScript : MonoBehaviour
         {
             this.interstitial.Show();
         }
+        else
+        {
+            if (gameObject.CompareTag("NextLevelButton"))
+                gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+            else if (gameObject.CompareTag("LevelMenuButton"))
+                gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+        }
     }
 
     public void HandleOnAdLoaded(object sender, EventArgs args)
@@ -114,11 +121,12 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
+        /* New Code
         if (gameObject.CompareTag("NextLevelButton"))
             gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
         else if (gameObject.CompareTag("LevelMenuButton"))
             gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
-        
+        */
     }
 
     public void HandleOnAdOpened(object sender, EventArgs args)

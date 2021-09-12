@@ -6,7 +6,7 @@ using GoogleMobileAds.Api;
 
 public class WatchAddButton : MonoBehaviour
 {
-    string RewarededAdID = "ca-app-pub-9789420081213637/2052140319";
+    string RewarededAdID = "ca-app-pub-9789420081213637/7478800777";
 
     private RewardedAd rewardedAd;
     private int levelNo;
@@ -41,6 +41,10 @@ public class WatchAddButton : MonoBehaviour
         if (this.rewardedAd.IsLoaded())
         {
             this.rewardedAd.Show();
+        }
+        else
+        {
+            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
         }
     }
 
