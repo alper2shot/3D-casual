@@ -6,15 +6,11 @@ using System;
 
 public class AdMobScript : MonoBehaviour
 {
-    //string appID = "ca-app-pub-9789420081213637~9306642947";
-
-    //string BannerAdID = "ca-app-pub-3940256099942544/6300978111";
+   
     string IntersitialAdID = "ca-app-pub-9789420081213637/2462848638";
-    //string RewarededAdID = "ca-app-pub-3940256099942544/5224354917";
-
-    //private BannerView bannerView;
+   
     private InterstitialAd interstitial;
-    //private RewardedAd rewarded;
+    private bool canClose=false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,62 +19,10 @@ public class AdMobScript : MonoBehaviour
         RequestInterstitial();
     }
 
-    /*
-    public void RequestBanner()
-    {
-        /*
-#if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/6300978111";
-#elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/2934735716";
-#else
-            string adUnitId = "unexpected_platform";
-#endif
-       
-
-        // Create a 320x50 banner at the top of the screen.
-        this.bannerView = new BannerView(BannerAdID, AdSize.Banner, AdPosition.Top);
-
-        // Called when an ad request has successfully loaded.
-        this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;
-        // Called when an ad request failed to load.
-        this.bannerView.OnAdFailedToLoad += this.HandleOnAdFailedToLoad;
-        // Called when an ad is clicked.
-        this.bannerView.OnAdOpening += this.HandleOnAdOpened;
-        // Called when the user returned from the app after an ad click.
-        this.bannerView.OnAdClosed += this.HandleOnAdClosed;
-
-        /*
-         //google ads 6.0 error
-        // Called when the ad click caused the user to leave the application.
-        //this.bannerView.OnAdLeavingApplication += this.HandleOnAdLeavingApplication;
-        
-
-        ShowBannerAD();
-        
-    }
-    
-    public void ShowBannerAD()
-    {
-        // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
-
-        // Load the banner with the request.
-        this.bannerView.LoadAd(request);
-    }
-    */
-
+   
     public void RequestInterstitial()
     {
-        /*
-#if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/1033173712";
-#elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3940256099942544/4411468910";
-#else
-        string adUnitId = "unexpected_platform";
-#endif
-        */
+
         // Initialize an InterstitialAd.
         this.interstitial = new InterstitialAd(IntersitialAdID);
         // Called when an ad request has successfully loaded.
@@ -103,7 +47,9 @@ public class AdMobScript : MonoBehaviour
     {
         if (this.interstitial.IsLoaded())
         {
+            canClose = true;
             this.interstitial.Show();
+            
         }
         else
         {
@@ -121,12 +67,7 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs args)
     {
-        /* New Code
-        if (gameObject.CompareTag("NextLevelButton"))
-            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
-        else if (gameObject.CompareTag("LevelMenuButton"))
-            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
-        */
+     
     }
 
     public void HandleOnAdOpened(object sender, EventArgs args)
@@ -136,11 +77,12 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
-        if(gameObject.CompareTag("NextLevelButton"))
-            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
-        else if(gameObject.CompareTag("LevelMenuButton"))
-            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
-        //MonoBehaviour.print("HandleAdClosed event received");
+        if (canClose) {
+            if (gameObject.CompareTag("NextLevelButton"))
+                gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+            else if (gameObject.CompareTag("LevelMenuButton"))
+                gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+        }
     }
 
     /*

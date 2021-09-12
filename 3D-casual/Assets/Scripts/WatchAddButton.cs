@@ -10,9 +10,12 @@ public class WatchAddButton : MonoBehaviour
 
     private RewardedAd rewardedAd;
     private int levelNo;
+    private bool canClose=false;
 
     public void Start()
     {
+        MobileAds.Initialize(initStatus => { });
+
         levelNo = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().levelNo;
 
         this.rewardedAd = new RewardedAd(RewarededAdID);
@@ -40,6 +43,7 @@ public class WatchAddButton : MonoBehaviour
     {
         if (this.rewardedAd.IsLoaded())
         {
+            canClose = true;
             this.rewardedAd.Show();
         }
         else
@@ -70,6 +74,7 @@ public class WatchAddButton : MonoBehaviour
 
     public void HandleRewardedAdClosed(object sender, EventArgs args)
     {
+        if(canClose)
         gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
     }
 
