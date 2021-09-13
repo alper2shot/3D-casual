@@ -10,7 +10,7 @@ public class AdMobScript : MonoBehaviour
     string IntersitialAdID = "ca-app-pub-9789420081213637/2462848638";
    
     private InterstitialAd interstitial;
-    private bool canClose=false;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,6 @@ public class AdMobScript : MonoBehaviour
     {
         if (this.interstitial.IsLoaded())
         {
-            canClose = true;
             this.interstitial.Show();
             
         }
@@ -77,12 +76,12 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
-        if (canClose) {
-            if (gameObject.CompareTag("NextLevelButton"))
-                gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
-            else if (gameObject.CompareTag("LevelMenuButton"))
-                gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
-        }
+       
+       if (gameObject.CompareTag("NextLevelButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+       else if (gameObject.CompareTag("LevelMenuButton"))
+            gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+        
     }
 
     /*
