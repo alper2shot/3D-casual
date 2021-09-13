@@ -110,7 +110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -350}
+  m_AnchoredPosition: {x: -50, y: -350.33325}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &49732152
@@ -120,7 +120,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49732148}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &49732151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531730600}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &531730602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541674104}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &541674107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +761,6 @@ GameObject:
   - component: {fileID: 624578393}
   - component: {fileID: 624578392}
   - component: {fileID: 624578391}
-  - component: {fileID: 2995468024127503666}
   m_Layer: 5
   m_Name: LevelMenuButton
   m_TagString: LevelMenuButton
@@ -795,7 +794,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624578389}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &624578392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,9 +869,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2995468024127503666}
-        m_TargetAssemblyTypeName: AdMobScript, Assembly-CSharp
-        m_MethodName: LoadInterstitial
+      - m_Target: {fileID: 8024919800495328864}
+        m_TargetAssemblyTypeName: TransitionCanvas, Assembly-CSharp
+        m_MethodName: LevelMenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -882,18 +881,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2995468024127503666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624578389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &641390528
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +926,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641390528}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &641390531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1211,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003453611}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1003453613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,7 +1748,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163311087}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1163311089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,7 +1961,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369773762}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1369773764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2021,7 +2008,6 @@ GameObject:
   - component: {fileID: 1407153775}
   - component: {fileID: 1407153774}
   - component: {fileID: 1407153773}
-  - component: {fileID: 8438509507597099744}
   m_Layer: 5
   m_Name: NextLevelButton
   m_TagString: NextLevelButton
@@ -2055,7 +2041,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407153771}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1407153774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,7 +2116,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8438509507597099744}
+      - m_Target: {fileID: 6721149635033431737}
         m_TargetAssemblyTypeName: AdMobScript, Assembly-CSharp
         m_MethodName: LoadInterstitial
         m_Mode: 1
@@ -2142,18 +2128,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8438509507597099744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407153771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1440824045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2173,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440824045}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1440824048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,7 +2439,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526507194}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1526507196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,7 +2816,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959675097}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &1959675099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,6 +3185,7 @@ GameObject:
   - component: {fileID: 2791703634449660851}
   - component: {fileID: 8024919800495328864}
   - component: {fileID: 2791703635568525825}
+  - component: {fileID: 6721149635033431737}
   m_Layer: 5
   m_Name: TransitionCanvas
   m_TagString: Untagged
@@ -3330,6 +3305,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7104161d4334b56bc810de7ec67aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6721149635033431737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2791703634449660848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9054ae93bc24748aa84a3fe4f203b967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3171326544730831907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,7 +3363,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3171326544730831907}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &885078842350046485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3678,7 +3665,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7829070480858878682}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &410574290045787235
 MonoBehaviour:
   m_ObjectHideFlags: 0

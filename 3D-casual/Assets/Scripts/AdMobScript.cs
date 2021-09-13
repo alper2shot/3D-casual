@@ -52,10 +52,7 @@ public class AdMobScript : MonoBehaviour
         }
         else
         {
-            if (gameObject.CompareTag("NextLevelButton"))
-                gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
-            else if (gameObject.CompareTag("LevelMenuButton"))
-                gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
+            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
         }
     }
 
@@ -76,12 +73,11 @@ public class AdMobScript : MonoBehaviour
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
-       
-       if (gameObject.CompareTag("NextLevelButton"))
-            gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+       gameObject.transform.root.GetComponent<TransitionCanvas>().NextLevelButton();
+       /*
        else if (gameObject.CompareTag("LevelMenuButton"))
             gameObject.transform.root.GetComponent<TransitionCanvas>().LevelMenuButton();
-        
+        */
     }
 
     /*
